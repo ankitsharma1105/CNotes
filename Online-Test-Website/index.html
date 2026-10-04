@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNotes - Premium Learning</title>
+    <meta name="description" content="Access course contents, tests, and resources for DS, B-IT, BB, and ADVE.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo" data-navigate="home">
+                <i class="fa-solid fa-layer-group"></i> CNotes
+            </a>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="nav-item active" data-navigate="home" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-item" data-navigate="about" data-target="about">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-item" data-navigate="content" data-target="content">Content <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-navigate="content-ds">DS</a></li>
+                        <li><a href="#" data-navigate="content-bit">B-IT</a></li>
+                        <li><a href="#" data-navigate="content-bb">BB</a></li>
+                        <li><a href="#" data-navigate="content-adve">ADVE</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-item" data-navigate="tests" data-target="tests">Online Test <i
+                            class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-navigate="test-ds">DS Test</a></li>
+                        <li><a href="#" data-navigate="test-bit">B-IT Test</a></li>
+                        <li><a href="#" data-navigate="test-bb">BB Test</a></li>
+                        <li><a href="#" data-navigate="test-adve">ADVE Test</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="nav-item" data-navigate="feedback" data-target="feedback">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- HOME SECTION -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <h1 class="gradient-text">Welcome to CNotes</h1>
+                <p class="subtitle">Your ultimate destination for premium course materials and interactive tests.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-navigate="content">Explore Content <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn btn-secondary" data-navigate="tests">Take a Test <i
+                            class="fa-solid fa-pen-to-square"></i></button>
+                </div>
+            </div>
+            <div class="features-grid mt-4">
+                <div class="glass-card feature-card" data-navigate="content">
+                    <div class="icon-wrapper bg-blue"><i class="fa-solid fa-book"></i></div>
+                    <h3>Rich Content</h3>
+                    <p>Access structured materials for DS, B-IT, BB, and ADVE.</p>
+                </div>
+                <div class="glass-card feature-card" data-navigate="tests">
+                    <div class="icon-wrapper bg-purple"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Online Tests</h3>
+                    <p>Challenge yourself with our comprehensive test suite.</p>
+                </div>
+                <div class="glass-card feature-card" data-navigate="feedback">
+                    <div class="icon-wrapper bg-pink"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Feedback</h3>
+                    <p>We value your input. Share your thoughts with us.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="page-section">
+            <div class="section-header">
+                <h2 class="gradient-text">About CNotes</h2>
+                <p>Learn more about our mission and platform.</p>
+            </div>
+            <div class="glass-card content-card">
+                <div class="about-content">
+                    <h3>Empowering Students</h3>
+                    <p>CNotes was built with a single goal in mind: to provide top-tier, easily accessible educational
+                        materials. Whether you are revising core concepts or testing your knowledge, our platform offers
+                        a seamless, distraction-free environment tailored for success.</p>
+                    <br>
+                    <h3>What we offer:</h3>
+                    <ul class="styled-list">
+                        <li><i class="fa-solid fa-check text-green"></i> Comprehensive course notes</li>
+                        <li><i class="fa-solid fa-check text-green"></i> Interactive online assessments</li>
+                        <li><i class="fa-solid fa-check text-green"></i> A modern, beautiful learning experience</li>
+                    </ul>
+                    <br>
+                    <h3>Our Thought</h3>
+                    <p style="font-style: italic; color: var(--text-secondary); border-left: 4px solid var(--accent-primary); padding-left: 1rem; margin-top: 0.5rem;">
+                        "Education is not just the learning of facts, but the training of the mind to think. We believe in empowering students through high-quality knowledge and right guidance."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT OVERVIEW SECTION -->
+        <section id="content" class="page-section">
+            <div class="section-header">
+                <h2 class="gradient-text">Course Content</h2>
+                <p>Select a subject to begin learning.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card course-card" data-navigate="content-ds">
+                    <h3>DS</h3>
+                    <p>Data Science</p>
+                    <div class="card-footer">
+                        <span>View Notes</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="glass-card course-card" data-navigate="content-bit">
+                    <h3>B-IT</h3>
+                    <p>Business Information Technology</p>
+                    <div class="card-footer">
+                        <span>View Notes</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="glass-card course-card" data-navigate="content-bb">
+                    <h3>BB</h3>
+                    <p>Big Byte</p>
+                    <div class="card-footer">
+                        <span>View Notes</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="glass-card course-card" data-navigate="content-adve">
+                    <h3>ADVE</h3>
+                    <p>Advanced Engineering</p>
+                    <div class="card-footer">
+                        <span>View Notes</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDIVIDUAL CONTENT SECTIONS -->
+        <section id="content-ds" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>DS</span></div>
+            <h2 class="gradient-text mb-2">Data Science (DS)</h2>
+            <div class="glass-card p-3">
+                <p>Content for DS will appear here.</p>
+                <div class="placeholder-skeleton"></div>
+                <div class="placeholder-skeleton short"></div>
+            </div>
+        </section>
+
+        <section id="content-bit" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>B-IT</span></div>
+            <h2 class="gradient-text mb-2">Business Information Tech (B-IT)</h2>
+            <div class="glass-card p-3">
+                <p>Content for B-IT will appear here.</p>
+                <div class="placeholder-skeleton"></div>
+                <div class="placeholder-skeleton short"></div>
+            </div>
+        </section>
+
+        <section id="content-bb" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>BB</span></div>
+            <h2 class="gradient-text mb-2">Big Byte (BB)</h2>
+            <div class="glass-card p-3">
+                <p>Content for BB will appear here.</p>
+                <div class="placeholder-skeleton"></div>
+                <div class="placeholder-skeleton short"></div>
+            </div>
+        </section>
+
+        <section id="content-adve" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>ADVE</span></div>
+            <h2 class="gradient-text mb-2">Advanced Engineering (ADVE)</h2>
+            <div class="glass-card p-3">
+                <p>Content for ADVE will appear here.</p>
+                <div class="placeholder-skeleton"></div>
+                <div class="placeholder-skeleton short"></div>
+            </div>
+        </section>
+
+        <!-- TESTS OVERVIEW SECTION -->
+        <section id="tests" class="page-section">
+            <div class="section-header">
+                <h2 class="gradient-text">Online Tests</h2>
+                <p>Evaluate your knowledge with our online tests.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="glass-card test-card" data-navigate="test-ds">
+                    <div class="test-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>DS Test</h3>
+                    <button class="btn btn-sm btn-outline">Start Test</button>
+                </div>
+                <div class="glass-card test-card" data-navigate="test-bit">
+                    <div class="test-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h3>B-IT Test</h3>
+                    <button class="btn btn-sm btn-outline">Start Test</button>
+                </div>
+                <div class="glass-card test-card" data-navigate="test-bb">
+                    <div class="test-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>BB Test</h3>
+                    <button class="btn btn-sm btn-outline">Start Test</button>
+                </div>
+                <div class="glass-card test-card" data-navigate="test-adve">
+                    <div class="test-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>ADVE Test</h3>
+                    <button class="btn btn-sm btn-outline">Start Test</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDIVIDUAL TEST SECTIONS -->
+        <section id="test-ds" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="tests">Tests</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>DS Test</span></div>
+            <div class="glass-card p-3 text-center">
+                <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                <h2 class="mb-1">DS Online Assessment</h2>
+                <p class="mb-2"><em>"Push yourself, because no one else is going to do it for you."</em></p>
+                <a href="https://YOUR_GOOGLE_DRIVE_URL_HERE" target="_blank" class="btn btn-primary">Begin Test Now</a>
+            </div>
+        </section>
+
+        <section id="test-bit" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="tests">Tests</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>B-IT Test</span></div>
+            <div class="glass-card p-3 text-center">
+                <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                <h2 class="mb-1">B-IT Online Assessment</h2>
+                <p class="mb-2"><em>"Success doesn't come to you, you go to it."</em></p>
+                <a href="https://YOUR_GOOGLE_DRIVE_URL_HERE" target="_blank" class="btn btn-primary">Begin Test Now</a>
+            </div>
+        </section>
+
+        <section id="test-bb" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="tests">Tests</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>BB Test</span></div>
+            <div class="glass-card p-3 text-center">
+                <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                <h2 class="mb-1">BB Online Assessment</h2>
+                <p class="mb-2"><em>"The expert in anything was once a beginner."</em></p>
+                <a href="https://YOUR_GOOGLE_DRIVE_URL_HERE" target="_blank" class="btn btn-primary">Begin Test Now</a>
+            </div>
+        </section>
+
+        <section id="test-adve" class="page-section sub-page">
+            <div class="breadcrumb"><a href="#" data-navigate="tests">Tests</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span>ADVE Test</span></div>
+            <div class="glass-card p-3 text-center">
+                <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                <h2 class="mb-1">ADVE Online Assessment</h2>
+                <p class="mb-2"><em>"Believe in yourself. There is something inside you greater than any obstacle."</em></p>
+                <a href="https://YOUR_GOOGLE_DRIVE_URL_HERE" target="_blank" class="btn btn-primary">Begin Test Now</a>
+            </div>
+        </section>
+
+        <!-- FEEDBACK SECTION -->
+        <section id="feedback" class="page-section">
+            <div class="section-header">
+                <h2 class="gradient-text">Feedback</h2>
+                <p>We'd love to hear from you!</p>
+            </div>
+            <div class="form-container glass-card">
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your feedback here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <div id="success-message" class="success-message" style="display:none;">
+                    <i class="fa-solid fa-circle-check"></i> Thank you for your feedback!
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 CNotes Platform. All rights reserved. | Created by Ankit Sharma</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
