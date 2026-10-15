@@ -141,7 +141,7 @@
                 </div>
                 <div class="glass-card course-card" data-navigate="content-bit">
                     <h3>B-IT</h3>
-                    <p>Business Information Technology</p>
+                    <p>Basic Information Technology</p>
                     <div class="card-footer">
                         <span>View Notes</span> <i class="fa-solid fa-arrow-right"></i>
                     </div>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="glass-card course-card" data-navigate="content-adve">
                     <h3>ADVE</h3>
-                    <p>Advanced Engineering</p>
+                    <p>Advanced Excel</p>
                     <div class="card-footer">
                         <span>View Notes</span> <i class="fa-solid fa-arrow-right"></i>
                     </div>
@@ -164,47 +164,776 @@
         </section>
 
         <!-- INDIVIDUAL CONTENT SECTIONS -->
+
+        <!-- 1. DATA SCIENCE (DS) NOTES -->
         <section id="content-ds" class="page-section sub-page">
             <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
-                    class="fa-solid fa-chevron-right"></i> <span>DS</span></div>
-            <h2 class="gradient-text mb-2">Data Science (DS)</h2>
-            <div class="glass-card p-3">
-                <p>Content for DS will appear here.</p>
-                <div class="placeholder-skeleton"></div>
-                <div class="placeholder-skeleton short"></div>
+                    class="fa-solid fa-chevron-right"></i> <span>Data Science (DS)</span></div>
+            
+            <div class="glass-card course-banner-card">
+                <div class="course-banner-info">
+                    <span class="badge category-badge mb-1">Curated Curriculum</span>
+                    <h2 class="gradient-text">Data Science (DS) Study Notes</h2>
+                    <p>Access high-quality lecture notes, Python scripts, statistical formulas, and ML summaries stored on Google Drive.</p>
+                </div>
+                <div class="course-banner-stats">
+                    <div class="course-stat-pill"><i class="fa-solid fa-book-open"></i> 5 Core Modules</div>
+                    <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> PDF & Jupyter</div>
+                    <button class="btn btn-primary btn-sm" data-navigate="test-ds">
+                        <i class="fa-solid fa-pen-to-square"></i> Take DS Test
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="glass-card notes-controls-card">
+                <div class="notes-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="notes-search-input" data-filter-target="ds-notes-grid" placeholder="Search Data Science notes by topic (e.g. Pandas, Regression, Statistics)...">
+                </div>
+                <div class="notes-filter-chips" data-filter-target="ds-notes-grid">
+                    <span class="filter-chip active" data-filter="all">All Notes (6)</span>
+                    <span class="filter-chip" data-filter="Python">Python & NumPy</span>
+                    <span class="filter-chip" data-filter="EDA">EDA & Viz</span>
+                    <span class="filter-chip" data-filter="Statistics">Statistics</span>
+                    <span class="filter-chip" data-filter="ML">Machine Learning</span>
+                    <span class="filter-chip" data-filter="Cheatsheet">Cheatsheet</span>
+                </div>
+            </div>
+
+            <!-- Notes Cards Grid -->
+            <div class="notes-grid" id="ds-notes-grid">
+                <!-- Module 1 -->
+                <div class="glass-card note-card" data-category="Python">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Module 01</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.2 MB</span>
+                    </div>
+                    <h3 class="note-title">Python for Data Science & Pandas</h3>
+                    <p class="note-desc">Comprehensive guide on Python data structures, NumPy vectorized operations, Pandas DataFrame wrangling, and missing data imputation.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">NumPy Arrays</span>
+                        <span class="topic-badge">DataFrames</span>
+                        <span class="topic-badge">Data Cleaning</span>
+                        <span class="topic-badge">GroupBy</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 54 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive" title="Open on Google Drive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 01: Python & Pandas" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="glass-card note-card" data-category="EDA">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Module 02</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.8 MB</span>
+                    </div>
+                    <h3 class="note-title">Exploratory Data Analysis (EDA) & Visualization</h3>
+                    <p class="note-desc">Visual analytics using Matplotlib, Seaborn, and Plotly. Boxplots, correlation heatmaps, feature engineering, and distribution analysis.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Matplotlib</span>
+                        <span class="topic-badge">Seaborn</span>
+                        <span class="topic-badge">Outlier Removal</span>
+                        <span class="topic-badge">Feature Scaling</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 46 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 02: EDA & Visualization" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="glass-card note-card" data-category="Statistics">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Module 03</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 3.9 MB</span>
+                    </div>
+                    <h3 class="note-title">Probability & Applied Statistics</h3>
+                    <p class="note-desc">Core mathematical foundations: descriptive statistics, probability distributions (Normal, Binomial), hypothesis testing, p-values, and A/B testing.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Hypothesis Testing</span>
+                        <span class="topic-badge">Central Limit Theorem</span>
+                        <span class="topic-badge">Z-Test & T-Test</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 62 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 03: Statistics for DS" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="glass-card note-card" data-category="ML">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Module 04</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.5 MB</span>
+                    </div>
+                    <h3 class="note-title">Machine Learning Algorithms</h3>
+                    <p class="note-desc">Mathematical derivations and Scikit-Learn code for Linear Regression, Logistic Regression, Decision Trees, Random Forests, SVM, and K-Means clustering.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Scikit-Learn</span>
+                        <span class="topic-badge">Supervised ML</span>
+                        <span class="topic-badge">Unsupervised ML</span>
+                        <span class="topic-badge">Cross-Validation</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 78 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 04: Machine Learning" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="glass-card note-card" data-category="ML">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Module 05</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.8 MB</span>
+                    </div>
+                    <h3 class="note-title">Model Evaluation, Tuning & Metrics</h3>
+                    <p class="note-desc">Confusion matrix, Precision, Recall, F1-Score, ROC-AUC curve, Bias-Variance tradeoff, GridSearch, and model deployment pipelines.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">ROC-AUC</span>
+                        <span class="topic-badge">Hyperparameter Tuning</span>
+                        <span class="topic-badge">Pipeline</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 40 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 05: Model Evaluation" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bonus Cheatsheet -->
+                <div class="glass-card note-card" data-category="Cheatsheet">
+                    <div class="note-card-top">
+                        <span class="unit-tag" style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Bonus</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 2.1 MB</span>
+                    </div>
+                    <h3 class="note-title">DS One-Shot Cheatsheet & SQL Handbook</h3>
+                    <p class="note-desc">Quick formula summaries, Scikit-Learn code snippets, 50+ essential SQL analytical queries, and interview Q&A revision sheets.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Quick Revision</span>
+                        <span class="topic-badge">SQL Queries</span>
+                        <span class="topic-badge">Formulas</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 24 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="DS One-Shot Cheatsheet" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- 2. BASIC INFORMATION TECHNOLOGY (B-IT) NOTES -->
         <section id="content-bit" class="page-section sub-page">
             <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
                     class="fa-solid fa-chevron-right"></i> <span>B-IT</span></div>
-            <h2 class="gradient-text mb-2">Basic Information Technology (B-IT)</h2>
-            <div class="glass-card p-3">
-                <p>Content for B-IT will appear here.</p>
-                <div class="placeholder-skeleton"></div>
-                <div class="placeholder-skeleton short"></div>
+
+            <div class="glass-card course-banner-card">
+                <div class="course-banner-info">
+                    <span class="badge category-badge mb-1">Foundational Program</span>
+                    <h2 class="gradient-text">Basic Information Technology (B-IT) Study Notes</h2>
+                    <p>Structured notes, conceptual diagrams, shortcut tables, and chapter-wise study materials hosted on Google Drive.</p>
+                </div>
+                <div class="course-banner-stats">
+                    <div class="course-stat-pill"><i class="fa-solid fa-layer-group"></i> 5 Comprehensive Units</div>
+                    <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> High-Quality PDF</div>
+                    <button class="btn btn-primary btn-sm" data-navigate="test-bit">
+                        <i class="fa-solid fa-stopwatch"></i> Practice B-IT Tests
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="glass-card notes-controls-card">
+                <div class="notes-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="notes-search-input" data-filter-target="bit-notes-grid" placeholder="Search B-IT notes by topic (e.g. CPU, RAM, Networking, Excel, Windows)...">
+                </div>
+                <div class="notes-filter-chips" data-filter-target="bit-notes-grid">
+                    <span class="filter-chip active" data-filter="all">All Notes (6)</span>
+                    <span class="filter-chip" data-filter="Hardware">Unit 1: Hardware</span>
+                    <span class="filter-chip" data-filter="OS">Unit 2: Operating Systems</span>
+                    <span class="filter-chip" data-filter="Networking">Unit 3: Networking</span>
+                    <span class="filter-chip" data-filter="Office">Unit 4: MS Office</span>
+                    <span class="filter-chip" data-filter="Security">Unit 5: Security & Cloud</span>
+                    <span class="filter-chip" data-filter="Cheatsheet">Cheatsheet</span>
+                </div>
+            </div>
+
+            <!-- Notes Cards Grid -->
+            <div class="notes-grid" id="bit-notes-grid">
+                <!-- Unit 1 -->
+                <div class="glass-card note-card" data-category="Hardware">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 01</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 3.8 MB</span>
+                    </div>
+                    <h3 class="note-title">Computer Fundamentals & Hardware Architecture</h3>
+                    <p class="note-desc">Comprehensive breakdown of Computer Generations, Von Neumann architecture, CPU functional blocks (ALU, CU, Registers), Cache memory, and I/O devices.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">CPU & ALU</span>
+                        <span class="topic-badge">RAM vs ROM</span>
+                        <span class="topic-badge">Storage Units</span>
+                        <span class="topic-badge">Motherboard</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 48 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive" title="Google Drive Link">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 01: Computer Hardware & CPU" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 2 -->
+                <div class="glass-card note-card" data-category="OS">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 02</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.1 MB</span>
+                    </div>
+                    <h3 class="note-title">Operating Systems & Software Engineering</h3>
+                    <p class="note-desc">System software vs application software, Windows OS administration, Linux shell fundamentals, process scheduling, memory allocation, and file systems (NTFS, FAT32).</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Windows 11</span>
+                        <span class="topic-badge">Linux Commands</span>
+                        <span class="topic-badge">File Systems</span>
+                        <span class="topic-badge">Device Drivers</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 42 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 02: Operating Systems" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 3 -->
+                <div class="glass-card note-card" data-category="Networking">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 03</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.2 MB</span>
+                    </div>
+                    <h3 class="note-title">Computer Networks & Internet Protocols</h3>
+                    <p class="note-desc">Data communication, network topologies (Star, Mesh, Bus), LAN/MAN/WAN, OSI 7-Layer model, TCP/IP, IP addressing (IPv4 vs IPv6), DNS, and web protocols (HTTP, HTTPS, FTP).</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">LAN & WAN</span>
+                        <span class="topic-badge">TCP/IP Protocol</span>
+                        <span class="topic-badge">OSI Model</span>
+                        <span class="topic-badge">IP Addressing</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 56 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 03: Networks & Internet" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 4 -->
+                <div class="glass-card note-card" data-category="Office">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 04</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.0 MB</span>
+                    </div>
+                    <h3 class="note-title">MS Office Suite & Productivity Tools</h3>
+                    <p class="note-desc">Complete handbook for Microsoft Office. Formatting in MS Word, mathematical formulas & chart creation in MS Excel, slide transitions in PowerPoint, and database tables in MS Access.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">MS Word</span>
+                        <span class="topic-badge">Excel Formulas</span>
+                        <span class="topic-badge">PowerPoint</span>
+                        <span class="topic-badge">Mail Merge</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 64 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 04: MS Office Suite" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 5 -->
+                <div class="glass-card note-card" data-category="Security">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 05</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 3.5 MB</span>
+                    </div>
+                    <h3 class="note-title">Cybersecurity, Cloud Storage & Trends</h3>
+                    <p class="note-desc">Protection against viruses, malware, trojans, ransomware and phishing scams. Antivirus architectures, Firewalls, Cloud Storage concepts (Google Drive, OneDrive), and emerging AI tools.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Antivirus & Firewall</span>
+                        <span class="topic-badge">Phishing & Security</span>
+                        <span class="topic-badge">Google Drive</span>
+                        <span class="topic-badge">Cloud Computing</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 38 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 05: Cybersecurity & Cloud" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bonus Cheatsheet -->
+                <div class="glass-card note-card" data-category="Cheatsheet">
+                    <div class="note-card-top">
+                        <span class="unit-tag" style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Bonus</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 1.8 MB</span>
+                    </div>
+                    <h3 class="note-title">B-IT One-Shot Revision & Shortcut Keys</h3>
+                    <p class="note-desc">Quick revision notes before exams. Includes all universal Windows shortcuts (Ctrl+A to Ctrl+Z), function keys (F1-F12), essential acronyms, and computer glossary.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Shortcut Keys</span>
+                        <span class="topic-badge">Full Forms</span>
+                        <span class="topic-badge">Glossary</span>
+                        <span class="topic-badge">Exam Ready</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 18 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT One-Shot Shortcut & Glossary" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- 3. BIG BYTE (BB) NOTES -->
         <section id="content-bb" class="page-section sub-page">
             <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
                     class="fa-solid fa-chevron-right"></i> <span>BB</span></div>
-            <h2 class="gradient-text mb-2">Big Byte (BB)</h2>
-            <div class="glass-card p-3">
-                <p>Content for BB will appear here.</p>
-                <div class="placeholder-skeleton"></div>
-                <div class="placeholder-skeleton short"></div>
+
+            <div class="glass-card course-banner-card">
+                <div class="course-banner-info">
+                    <span class="badge category-badge mb-1">Advanced Technology</span>
+                    <h2 class="gradient-text">Big Byte (BB) Study Notes</h2>
+                    <p>Comprehensive guides on Big Data architectures, Hadoop ecosystem, MapReduce, Apache Spark, and NoSQL databases.</p>
+                </div>
+                <div class="course-banner-stats">
+                    <div class="course-stat-pill"><i class="fa-solid fa-database"></i> 5 Modules</div>
+                    <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> PDF Resources</div>
+                    <button class="btn btn-primary btn-sm" data-navigate="test-bb">
+                        <i class="fa-solid fa-chart-pie"></i> Practice BB Tests
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="glass-card notes-controls-card">
+                <div class="notes-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="notes-search-input" data-filter-target="bb-notes-grid" placeholder="Search BB notes (e.g. Hadoop, HDFS, Spark, NoSQL, MongoDB)...">
+                </div>
+                <div class="notes-filter-chips" data-filter-target="bb-notes-grid">
+                    <span class="filter-chip active" data-filter="all">All Notes (5)</span>
+                    <span class="filter-chip" data-filter="Hadoop">Hadoop & HDFS</span>
+                    <span class="filter-chip" data-filter="Spark">Apache Spark</span>
+                    <span class="filter-chip" data-filter="NoSQL">NoSQL DBs</span>
+                    <span class="filter-chip" data-filter="Analytics">Analytics</span>
+                </div>
+            </div>
+
+            <!-- Notes Cards Grid -->
+            <div class="notes-grid" id="bb-notes-grid">
+                <!-- Unit 1 -->
+                <div class="glass-card note-card" data-category="Hadoop">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 01</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.5 MB</span>
+                    </div>
+                    <h3 class="note-title">Big Data Concepts & HDFS Architecture</h3>
+                    <p class="note-desc">The 5 V's of Big Data (Volume, Velocity, Variety, Veracity, Value). Hadoop Distributed File System (HDFS), NameNode, DataNode replication and fault tolerance.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">5 V's of Data</span>
+                        <span class="topic-badge">HDFS Architecture</span>
+                        <span class="topic-badge">NameNode & DataNode</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 52 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 01: Big Data & HDFS" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 2 -->
+                <div class="glass-card note-card" data-category="Hadoop">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 02</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.0 MB</span>
+                    </div>
+                    <h3 class="note-title">MapReduce Framework & YARN</h3>
+                    <p class="note-desc">Distributed compute processing paradigm: Mappers, Reducers, Combiners, Shuffle & Sort mechanisms, and YARN resource management.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">MapReduce</span>
+                        <span class="topic-badge">YARN Resource Mgr</span>
+                        <span class="topic-badge">Shuffle & Sort</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 44 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 02: MapReduce & YARN" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 3 -->
+                <div class="glass-card note-card" data-category="Spark">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 03</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.2 MB</span>
+                    </div>
+                    <h3 class="note-title">Apache Spark & In-Memory Computing</h3>
+                    <p class="note-desc">High-speed in-memory analytics using Apache Spark. Resilient Distributed Datasets (RDDs), Spark DataFrames, Spark SQL, and lazy evaluation.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Apache Spark</span>
+                        <span class="topic-badge">RDDs & DataFrames</span>
+                        <span class="topic-badge">Spark SQL</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 60 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 03: Apache Spark" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 4 -->
+                <div class="glass-card note-card" data-category="NoSQL">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 04</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.9 MB</span>
+                    </div>
+                    <h3 class="note-title">NoSQL Databases & Distributed Storage</h3>
+                    <p class="note-desc">CAP Theorem, Document stores (MongoDB), Wide-column stores (Apache Cassandra), Key-Value databases, and Apache Hive data warehousing.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">MongoDB</span>
+                        <span class="topic-badge">Cassandra</span>
+                        <span class="topic-badge">CAP Theorem</span>
+                        <span class="topic-badge">Apache Hive</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 48 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 04: NoSQL Databases" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 5 -->
+                <div class="glass-card note-card" data-category="Analytics">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 05</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.0 MB</span>
+                    </div>
+                    <h3 class="note-title">Real-Time Data Pipelines & Analytics</h3>
+                    <p class="note-desc">Stream ingestion with Apache Kafka, message brokers, real-time analytics dashboards, and cloud data lake architectures (AWS S3, Databricks).</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Apache Kafka</span>
+                        <span class="topic-badge">Data Lakes</span>
+                        <span class="topic-badge">Real-Time Streams</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 36 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 05: Data Pipelines" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- 4. ADVANCED EXCEL (ADVE) NOTES -->
         <section id="content-adve" class="page-section sub-page">
             <div class="breadcrumb"><a href="#" data-navigate="content">Content</a> <i
                     class="fa-solid fa-chevron-right"></i> <span>ADVE</span></div>
-            <h2 class="gradient-text mb-2">Advanced Excel(ADVE)</h2>
-            <div class="glass-card p-3">
-                <p>Content for ADVE will appear here.</p>
-                <div class="placeholder-skeleton"></div>
-                <div class="placeholder-skeleton short"></div>
+
+            <div class="glass-card course-banner-card">
+                <div class="course-banner-info">
+                    <span class="badge category-badge mb-1">Corporate Analytics</span>
+                    <h2 class="gradient-text">Advanced Excel (ADVE) Study Notes</h2>
+                    <p>Master dynamic array functions, Power Query ETL, Pivot Tables, interactive executive dashboards, and VBA macro automation.</p>
+                </div>
+                <div class="course-banner-stats">
+                    <div class="course-stat-pill"><i class="fa-solid fa-table"></i> 5 Comprehensive Modules</div>
+                    <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-excel"></i> Workbooks & PDFs</div>
+                    <button class="btn btn-primary btn-sm" data-navigate="test-adve">
+                        <i class="fa-solid fa-gears"></i> Practice ADVE Tests
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="glass-card notes-controls-card">
+                <div class="notes-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="notes-search-input" data-filter-target="adve-notes-grid" placeholder="Search ADVE notes (e.g. XLOOKUP, Pivot, Power Query, Macros, VBA)...">
+                </div>
+                <div class="notes-filter-chips" data-filter-target="adve-notes-grid">
+                    <span class="filter-chip active" data-filter="all">All Notes (5)</span>
+                    <span class="filter-chip" data-filter="Formulas">Formulas & Arrays</span>
+                    <span class="filter-chip" data-filter="Pivot">Pivot & Power Pivot</span>
+                    <span class="filter-chip" data-filter="PowerQuery">Power Query ETL</span>
+                    <span class="filter-chip" data-filter="Dashboards">Dashboards</span>
+                    <span class="filter-chip" data-filter="VBA">VBA & Macros</span>
+                </div>
+            </div>
+
+            <!-- Notes Cards Grid -->
+            <div class="notes-grid" id="adve-notes-grid">
+                <!-- Unit 1 -->
+                <div class="glass-card note-card" data-category="Formulas">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 01</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.2 MB</span>
+                    </div>
+                    <h3 class="note-title">Master Modern Formulas & Dynamic Arrays</h3>
+                    <p class="note-desc">In-depth guide to modern functions: XLOOKUP, INDEX & MATCH, FILTER, UNIQUE, SORT, XMATCH, LET, and custom LAMBDA formulas.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">XLOOKUP</span>
+                        <span class="topic-badge">Dynamic Arrays</span>
+                        <span class="topic-badge">FILTER & UNIQUE</span>
+                        <span class="topic-badge">LAMBDA</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 50 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 01: Modern Formulas" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 2 -->
+                <div class="glass-card note-card" data-category="Pivot">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 02</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.5 MB</span>
+                    </div>
+                    <h3 class="note-title">Pivot Tables, Slicers & Power Pivot</h3>
+                    <p class="note-desc">Data summarization with Pivot Tables, calculated fields, dynamic timelines, multi-table relationships, and introduction to DAX formulas.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Pivot Tables</span>
+                        <span class="topic-badge">Slicers & Timelines</span>
+                        <span class="topic-badge">Data Model</span>
+                        <span class="topic-badge">DAX Basics</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 45 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 02: Pivot & Power Pivot" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 3 -->
+                <div class="glass-card note-card" data-category="PowerQuery">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 03</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.1 MB</span>
+                    </div>
+                    <h3 class="note-title">Power Query ETL & Data Automation</h3>
+                    <p class="note-desc">Extract, Transform, and Load (ETL) without code. Connecting to multiple folders, unpivoting columns, appending tables, and cleaning messy data.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">Power Query</span>
+                        <span class="topic-badge">Automated ETL</span>
+                        <span class="topic-badge">Unpivot Columns</span>
+                        <span class="topic-badge">Merge Queries</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 58 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 03: Power Query ETL" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 4 -->
+                <div class="glass-card note-card" data-category="Dashboards">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 04</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 7.4 MB</span>
+                    </div>
+                    <h3 class="note-title">Executive Dashboards & Visualizations</h3>
+                    <p class="note-desc">Designing professional C-suite dashboards in Excel. Sparklines, dynamic chart ranges, conditional formatting heatmaps, and interactive KPI cards.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">KPI Dashboards</span>
+                        <span class="topic-badge">Dynamic Charts</span>
+                        <span class="topic-badge">Conditional Formatting</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 62 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 04: Executive Dashboards" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unit 5 -->
+                <div class="glass-card note-card" data-category="VBA">
+                    <div class="note-card-top">
+                        <span class="unit-tag">Unit 05</span>
+                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.7 MB</span>
+                    </div>
+                    <h3 class="note-title">Excel VBA & Macro Automation</h3>
+                    <p class="note-desc">Writing custom macros from scratch. Visual Basic for Applications (VBA) editor, Sub & Function procedures, Loops (For, Do While), and UserForms.</p>
+                    <div class="note-topics">
+                        <span class="topic-badge">VBA Scripts</span>
+                        <span class="topic-badge">Macro Automation</span>
+                        <span class="topic-badge">UserForms</span>
+                        <span class="topic-badge">Custom Functions</span>
+                    </div>
+                    <div class="note-file-info">
+                        <span><i class="fa-regular fa-file-lines"></i> 54 Pages</span>
+                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
+                    </div>
+                    <div class="note-actions">
+                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
+                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        </a>
+                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 05: Excel VBA & Macros" data-doc-url="https://drive.google.com/">
+                            <i class="fa-solid fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -254,7 +983,7 @@
                         <h2 class="mb-1">DS Exam 1</h2>
                         <p class="mb-2"><em>"Push yourself, because no one else is going to do it for you."</em></p>
                     </div>
-                    <a href="https://stupendous-puffpuff-a45a12.netlify.app" target="_blank"
+                    <a href="https://exam-no1.netlify.app/" target="_blank"
                         class="btn btn-primary">Begin
                         Exam 1</a>
                 </div>
@@ -265,33 +994,394 @@
                         <h2 class="mb-1">DS Exam 2</h2>
                         <p class="mb-2"><em>"Success is the sum of small efforts, repeated day in and day out."</em></p>
                     </div>
-                    <a href="https://stupendous-puffpuff-a45a12.netlify.app" target="_blank"
+                    <a href="https://thriving-meerkat-3031fa.netlify.app/" target="_blank"
                         class="btn btn-primary">Begin Exam 2</a>
+                </div>
+                <!--3rd-->
+                    <div class="glass-card p-3 text-center"
+                    style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">DS Exam 3</h2>
+                        <p class="mb-2"><em>"Success is the sum of small efforts, repeated day in and day out."</em></p>
+                    </div>
+                    <a href="https://fantastic-otter-80ad33.netlify.app/" target="_blank"
+                        class="btn btn-primary">Begin Exam 3</a>
+                </div>
+            <!--4th-->
+                   <div class="glass-card p-3 text-center"
+                    style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">DS Exam 4</h2>
+                        <p class="mb-2"><em>"Success is the sum of small efforts, repeated day in and day out."</em></p>
+                    </div>
+                    <a href="https://serene-paletas-5630ad.netlify.app/" target="_blank"
+                        class="btn btn-primary">Begin Exam 4</a>
+                </div>
+                <!--5th-->
+                       <div class="glass-card p-3 text-center"
+                    style="display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">DS Exam 5</h2>
+                        <p class="mb-2"><em>"Success is the sum of small efforts, repeated day in and day out."</em></p>
+                    </div>
+                    <a href="https:" target="_blank"
+                        class="btn btn-primary">Begin Exam 5</a>
                 </div>
             </div>
         </section>
 
+        <!-- Basic-IT Online Assessment Section -->
         <section id="test-bit" class="page-section sub-page">
             <div class="breadcrumb"><a href="#" data-navigate="tests">Tests</a> <i
                     class="fa-solid fa-chevron-right"></i> <span>B-IT Test</span></div>
-            <div class="glass-card p-3 text-center">
-                <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
-                <h2 class="mb-1">Basic-IT Online Assessment</h2>
-                <p class="mb-2"><em>"Success doesn't come to you, you go to it."</em></p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSefHqJZ4flS4h771lO1Y0UNO7IIoEZsEbnmOdfxMsSE7ddYww/viewform?usp=header"
-                    target="_blank" class="btn btn-primary">Begin Test Now</a>
+
+            <div class="section-header text-center mb-2">
+                <h2 class="gradient-text">Basic Information Technology (B-IT) Online Assessments</h2>
+                <p>Test and sharpen your fundamental computer knowledge through comprehensive examinations.</p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- 1st Paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Basic IT - 1 Examination</h2>
+                        <p class="mb-2"><em>"Success doesn't come to you, you go to it."</em></p>
+                        <div class="test-meta-info">
+                            <span><i class="fa-solid fa-circle-question"></i> 20 Questions</span>
+                            <span><i class="fa-regular fa-clock"></i> 20 Mins</span>
+                            <span><i class="fa-solid fa-award"></i> 20 Marks</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" data-navigate="exam-bit-1" id="startBit1ExamBtn">
+                        <i class="fa-solid fa-play"></i> Begin Exam 1
+                    </button>
+                </div>
+
+                <!-- 2nd Paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Basic IT - 2 Examination</h2>
+                        <p class="mb-2"><em>"The secret of getting ahead is getting started."</em></p>
+                        <div class="test-meta-info">
+                            <span><i class="fa-solid fa-circle-question"></i> 20 Questions</span>
+                            <span><i class="fa-regular fa-clock"></i> 20 Mins</span>
+                            <span><i class="fa-solid fa-award"></i> 20 Marks</span>
+                        </div>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScBP18SLlmHAJc2nMUWtx2dwxa70gag6fyMMFeM3WLBY5CcCg/viewform?usp=preview"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam 2</a>
+                </div>
+
+                <!-- 3rd Paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Basic IT - 3 Examination</h2>
+                        <p class="mb-2"><em>"Learning never exhausts the mind."</em></p>
+                        <div class="test-meta-info">
+                            <span><i class="fa-solid fa-circle-question"></i> 20 Questions</span>
+                            <span><i class="fa-regular fa-clock"></i> 20 Mins</span>
+                            <span><i class="fa-solid fa-award"></i> 20 Marks</span>
+                        </div>
+                    </div>
+                    <a href="https://scaling-train-699pv6x4r665hxp5-3000.app.github.dev/Online-Test-Website/"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam 3</a>
+                </div>
+
+                <!-- 4th Paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Basic IT - 4 Examination</h2>
+                        <p class="mb-2"><em>"Quality is not an act, it is a habit."</em></p>
+                        <div class="test-meta-info">
+                            <span><i class="fa-solid fa-circle-question"></i> 20 Questions</span>
+                            <span><i class="fa-regular fa-clock"></i> 20 Mins</span>
+                            <span><i class="fa-solid fa-award"></i> 20 Marks</span>
+                        </div>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSefHqJZ4flS4h771lO1Y0UNO7IIoEZsEbnmOdfxMsSE7ddYww/viewform?usp=header"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam 4</a>
+                </div>
+
+                <!-- 5th Paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Basic IT - 5 Examination</h2>
+                        <p class="mb-2"><em>"Stay curious, keep learning and expanding your horizons."</em></p>
+                        <div class="test-meta-info">
+                            <span><i class="fa-solid fa-circle-question"></i> 20 Questions</span>
+                            <span><i class="fa-regular fa-clock"></i> 20 Mins</span>
+                            <span><i class="fa-solid fa-award"></i> 20 Marks</span>
+                        </div>
+                    </div>
+                    <a href="https://scaling-train-699pv6x4r665hxp5-3000.app.github.dev/Online-Test-Website/"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam 5</a>
+                </div>
             </div>
         </section>
 
+        <!-- DEDICATED PROPER FORMAT ONLINE EXAMINATION: BASIC IT - 1 -->
+        <section id="exam-bit-1" class="page-section sub-page">
+            <div class="breadcrumb">
+                <a href="#" data-navigate="tests">Tests</a> 
+                <i class="fa-solid fa-chevron-right"></i> 
+                <a href="#" data-navigate="test-bit">B-IT Test</a> 
+                <i class="fa-solid fa-chevron-right"></i> 
+                <span>Basic IT - 1 Examination</span>
+            </div>
+
+            <div class="exam-wrapper">
+                <!-- Examination Mode Switcher Tabs -->
+                <div class="exam-tabs-nav">
+                    <button class="exam-tab-btn active" id="tabBtnCBT">
+                        <i class="fa-solid fa-desktop"></i> Interactive CBT Exam
+                    </button>
+                    <button class="exam-tab-btn" id="tabBtnGoogleForm">
+                        <i class="fa-brands fa-google"></i> Official Google Form Paper
+                    </button>
+                </div>
+
+                <!-- MODE 1: INTERACTIVE CBT EXAM -->
+                <div id="cbtExamContainer">
+                    <!-- Stage A: Instructions & Scheme Screen -->
+                    <div class="glass-card exam-instructions-card" id="examInstructionsCard">
+                        <div class="exam-instructions-header">
+                            <span class="badge category-badge mb-1">Paper Code: BIT-101</span>
+                            <h2>Basic IT - 1 Examination</h2>
+                            <p class="text-secondary">Please review the examination format, guidelines, and marking scheme before starting.</p>
+                        </div>
+
+                        <div class="exam-scheme-grid">
+                            <div class="exam-scheme-item">
+                                <i class="fa-solid fa-list-ol"></i>
+                                <div class="val">20</div>
+                                <div class="lbl">Total Questions</div>
+                            </div>
+                            <div class="exam-scheme-item">
+                                <i class="fa-regular fa-clock"></i>
+                                <div class="val">20 Mins</div>
+                                <div class="lbl">Exam Duration</div>
+                            </div>
+                            <div class="exam-scheme-item">
+                                <i class="fa-solid fa-star"></i>
+                                <div class="val">20 Marks</div>
+                                <div class="lbl">Maximum Marks</div>
+                            </div>
+                            <div class="exam-scheme-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div class="val">+1 / 0</div>
+                                <div class="lbl">No Negative Mark</div>
+                            </div>
+                            <div class="exam-scheme-item">
+                                <i class="fa-solid fa-award"></i>
+                                <div class="val">60% (12 Marks)</div>
+                                <div class="lbl">Passing Mark</div>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-2 mb-1" style="font-size: 1.15rem;">Important Instructions for Candidates:</h3>
+                        <ul class="instructions-list">
+                            <li><i class="fa-solid fa-circle-dot"></i> The examination consists of 20 Multiple Choice Questions (MCQs) covering Computer Fundamentals, Hardware, OS, Internet & MS Office.</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> The timer of 20:00 minutes will start immediately upon clicking "Begin Examination".</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> You can navigate freely between questions using the "Previous", "Next", or the Question Palette on the right.</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> You can use "Mark for Review" on questions you want to double-check before submission.</li>
+                            <li><i class="fa-solid fa-circle-dot"></i> When the countdown timer reaches zero, your responses will be submitted automatically.</li>
+                        </ul>
+
+                        <label class="instructions-checkbox-box">
+                            <input type="checkbox" id="chkAcceptTerms" checked>
+                            <span>I have read and understood all the examination rules and instructions. I am ready to begin.</span>
+                        </label>
+
+                        <div class="text-center">
+                            <button class="btn btn-primary" id="btnStartExamConfirmed" style="padding: 0.9rem 2.5rem; font-size: 1.1rem;">
+                                <i class="fa-solid fa-play"></i> Begin Examination Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Stage B: Active Exam Workspace (Initially Hidden) -->
+                    <div id="examActiveWorkspace" style="display: none;">
+                        <!-- Exam Top Info Bar -->
+                        <div class="glass-card exam-header-card mb-2">
+                            <div class="exam-header-info">
+                                <h2><i class="fa-solid fa-laptop-code text-accent"></i> Basic IT - 1 Examination</h2>
+                                <p class="exam-subtitle">Paper Code: BIT-101 | Candidate Exam Session</p>
+                            </div>
+                            <div class="exam-header-stats">
+                                <div class="exam-timer-box" id="examTimerBox" title="Time Remaining">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span id="examTimer">20:00</span>
+                                </div>
+                                <button class="btn btn-sm btn-primary" id="btnSubmitExamTop">Submit Exam <i class="fa-solid fa-check"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar Container -->
+                        <div class="exam-progress-bar-container mb-2" id="examProgressContainer">
+                            <div class="exam-progress-info">
+                                <span>Progress: <strong id="examProgressText">Question 1 of 20</strong></span>
+                                <span id="examAnsweredCount">0 of 20 Answered</span>
+                            </div>
+                            <div class="exam-progress-track">
+                                <div class="exam-progress-fill" id="examProgressFill" style="width: 5%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Main Exam Body (Question + Palette) -->
+                        <div class="exam-body-grid" id="examBodyGrid">
+                            <!-- Left: Current Question Card -->
+                            <div class="glass-card question-card" id="questionContainer">
+                                <div class="question-header">
+                                    <span class="badge category-badge" id="questionCategory">Computer Fundamentals</span>
+                                    <span class="badge question-badge" id="questionNumberBadge">Question 1 of 20</span>
+                                    <span class="badge marks-badge">+1.00 Mark | -0.00</span>
+                                    <button class="btn-flag" id="btnFlagQuestion" title="Mark this question for later review">
+                                        <i class="fa-regular fa-bookmark"></i> <span id="btnFlagText">Mark for Review</span>
+                                    </button>
+                                </div>
+
+                                <div class="question-title" id="questionText">
+                                    Loading question...
+                                </div>
+
+                                <div class="options-list" id="optionsContainer">
+                                    <!-- Options injected dynamically by JS -->
+                                </div>
+
+                                <div class="question-footer">
+                                    <button class="btn btn-secondary" id="btnPrevQuestion">
+                                        <i class="fa-solid fa-arrow-left"></i> Previous
+                                    </button>
+                                    <button class="btn btn-outline btn-sm" id="btnClearSelection">
+                                        <i class="fa-solid fa-rotate-left"></i> Clear Choice
+                                    </button>
+                                    <button class="btn btn-primary" id="btnNextQuestion">
+                                        Save & Next <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Right: Question Palette -->
+                            <div class="glass-card exam-palette-card">
+                                <h3>Question Palette</h3>
+                                <div class="palette-legend">
+                                    <div class="legend-item"><span class="legend-dot dot-answered"></span> Answered</div>
+                                    <div class="legend-item"><span class="legend-dot dot-flagged"></span> Marked for Review</div>
+                                    <div class="legend-item"><span class="legend-dot dot-unanswered"></span> Not Visited</div>
+                                </div>
+
+                                <div class="question-palette-grid" id="questionPaletteGrid">
+                                    <!-- 20 question buttons generated dynamically -->
+                                </div>
+
+                                <div class="palette-footer mt-2">
+                                    <button class="btn btn-primary w-100" id="btnSubmitExamBottom">
+                                        Finish & Submit <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage C: Results & Scorecard Card (Shown upon submission) -->
+                    <div class="glass-card exam-result-card" id="examResultCard" style="display: none;">
+                        <div id="resultContent">
+                            <!-- Result summary injected dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODE 2: EMBEDDED GOOGLE FORM -->
+                <div id="googleFormContainer" style="display: none;">
+                    <div class="glass-card embedded-form-card">
+                        <div class="d-flex justify-content-between align-items-center mb-2" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <h3><i class="fa-brands fa-google text-accent"></i> Official Basic IT - 1 Google Form</h3>
+                                <p class="text-secondary">Complete the official test paper directly below or open in a new tab.</p>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSefHqJZ4flS4h771lO1Y0UNO7IIoEZsEbnmOdfxMsSE7ddYww/viewform?usp=header"
+                                target="_blank" class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+                            </a>
+                        </div>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefHqJZ4flS4h771lO1Y0UNO7IIoEZsEbnmOdfxMsSE7ddYww/viewform?embedded=true">
+                            Loading Google Form Examination…
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Big-Byte Online Assessment Section -->
         <section id="test-bb" class="page-section sub-page">
             <div class="breadcrumb"><a href="#" data-navigate="tests">Tests</a> <i
                     class="fa-solid fa-chevron-right"></i> <span>BB Test</span></div>
-            <div class="glass-card p-3 text-center">
-                <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
-                <h2 class="mb-1">Big-Byte Online Assessment</h2>
-                <p class="mb-2"><em>"The expert in anything was once a beginner."</em></p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf34Wo0YV--vRqCAACSCbZZYGf03M0iNhhZL4KlfEYQQCDgpQ/viewform?usp=publish-editor"
-                    target="_blank" class="btn btn-primary">Begin Test Now</a>
+
+            <div class="section-header text-center mb-2">
+                <h2 class="gradient-text">Big-Byte (BB) Online Assessments</h2>
+                <p>Sharpen your analytical skills with curated test assessments.</p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- 1st paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Big-Byte - 1 Examination</h2>
+                        <p class="mb-2"><em>"The expert in anything was once a beginner."</em></p>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf34Wo0YV--vRqCAACSCbZZYGf03M0iNhhZL4KlfEYQQCDgpQ/viewform?usp=publish-editor"
+                        target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
+                </div>
+
+                <!-- 2nd paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Big-Byte - 2 Examination</h2>
+                        <p class="mb-2"><em>"The secret of getting ahead is getting started."</em></p>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzS9Wdk4i4jkGbIPKPvH16UXeBTnWWFNGuQ7s7Yyp41dy9Jg/viewform?usp=preview"
+                        target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
+                </div>
+
+                <!-- 3rd paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Big-Byte - 3 Examination</h2>
+                        <p class="mb-2"><em>"Small deeds done are better than great deeds planned."</em></p>
+                    </div>
+                    <a href="#" target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
+                </div>
+
+                <!-- 4th paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Big-Byte - 4 Examination</h2>
+                        <p class="mb-2"><em>"Continuous improvement is better than delayed perfection."</em></p>
+                    </div>
+                    <a href="#" target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
+                </div>
+
+                <!-- 5th paper -->
+                <div class="glass-card p-3 text-center test-card-modern">
+                    <div>
+                        <i class="fa-solid fa-stopwatch text-accent mb-1" style="font-size: 3rem;"></i>
+                        <h2 class="mb-1">Big-Byte - 5 Examination</h2>
+                        <p class="mb-2"><em>"Perseverance is failing 19 times and succeeding the 20th."</em></p>
+                    </div>
+                    <a href="#" target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
+                </div>
             </div>
         </section>
 
@@ -338,9 +1428,35 @@
         </section>
     </main>
 
+    <!-- IN-APP DOCUMENT / GOOGLE DRIVE PREVIEW MODAL -->
+    <div class="preview-modal-backdrop" id="notesPreviewModal">
+        <div class="preview-modal-card">
+            <div class="preview-modal-header">
+                <h3 id="previewModalTitle"><i class="fa-solid fa-file-pdf text-accent"></i> Notes Preview</h3>
+                <div class="preview-modal-actions">
+                    <a href="#" id="previewModalOpenDrive" target="_blank" class="btn btn-sm btn-gdrive">
+                        <i class="fa-brands fa-google-drive"></i> Open in Google Drive
+                    </a>
+                    <button class="btn-modal-close" id="previewModalCloseBtn" title="Close Preview">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="preview-modal-body">
+                <iframe id="previewModalIframe" src="about:blank"></iframe>
+            </div>
+        </div>
+    </div>
+
     <footer class="glass-footer">
         <p>&copy; 2026 CNotes Platform. All rights reserved. | Created by Ankit Sharma</p>
     </footer>
+
+    <!-- FLOATING WHATSAPP CHAT BUTTON -->
+    <a href="https://wa.me/?text=Hello%20Ankit,%20I%20have%20a%20query%20about%20CNotes%20platform" target="_blank" class="floating-whatsapp-btn" id="floatingWhatsAppBtn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
 
     <script src="script.js"></script>
 </body>
