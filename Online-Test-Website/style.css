@@ -1959,3 +1959,92 @@ h3 {
         display: none;
     }
 }
+
+
+/* Responsive Floating See Notes Button */
+.floating-notes-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-notes-btn:hover {
+    transform: translateY(-4px);
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* See Notes Tooltip */
+.notes-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #1f2937;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    font-size: 14px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.floating-notes-btn:hover .notes-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .floating-notes-btn {
+        right: 15px;
+        bottom: 20px;
+        width: 54px;
+        height: 54px;
+        font-size: 23px;
+    }
+
+    .notes-tooltip {
+        right: 62px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .floating-notes-btn {
+        right: 12px;
+        bottom: 15px;
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .notes-tooltip {
+        right: 56px;
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}
