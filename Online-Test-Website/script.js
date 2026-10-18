@@ -33,8 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackForm.addEventListener('submit', submitFeedback);
     }
 
+    // Initialize Star Rating Widget
+    initStarRating();
+
     // Initialize Course Notes (Search, Filter, and Preview Modal)
     initNotesFeatures();
+
+    // Initialize Course Channels Modal (See Notes button)
+    initCourseChannelsModal();
 });
 
 function navigateTo(sectionId) {
@@ -84,32 +90,154 @@ function navigateTo(sectionId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function initStarRating() {
+    const starWidget = document.getElementById('starRatingWidget');
+    if (!starWidget) return;
+
+    const stars = starWidget.querySelectorAll('i');
+    const ratingInput = document.getElementById('ratingValue');
+    const display = document.getElementById('ratingScoreDisplay');
+
+    const scoreLabels = {
+        1: "1.0 / 5.0 (Needs Improvement)",
+        2: "2.0 / 5.0 (Fair)",
+        3: "3.0 / 5.0 (Good)",
+        4: "4.0 / 5.0 (Very Good)",
+        5: "5.0 / 5.0 (Excellent)"
+    };
+
+    function setRating(val) {
+        if (ratingInput) ratingInput.value = val;
+        stars.forEach(s => {
+            const r = parseInt(s.getAttribute('data-rating'), 10);
+            if (r <= val) {
+                s.classList.add('active');
+            } else {
+                s.classList.remove('active');
+            }
+        });
+        if (display && scoreLabels[val]) {
+            display.textContent = scoreLabels[val];
+        }
+    }
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const val = parseInt(star.getAttribute('data-rating'), 10);
+            setRating(val);
+        });
+
+        star.addEventListener('mouseenter', () => {
+            const val = parseInt(star.getAttribute('data-rating'), 10);
+            stars.forEach(s => {
+                const r = parseInt(s.getAttribute('data-rating'), 10);
+                if (r <= val) {
+                    s.classList.add('hovered');
+                } else {
+                    s.classList.remove('hovered');
+                }
+            });
+        });
+    });
+
+    starWidget.addEventListener('mouseleave', () => {
+        stars.forEach(s => s.classList.remove('hovered'));
+    });
+}
+
 function submitFeedback(event) {
     event.preventDefault();
 
     const form = event.target;
     const successMessage = document.getElementById('success-message');
+    const nameInput = document.getElementById('name');
+    const courseSelect = document.getElementById('reviewCourse');
+    const messageInput = document.getElementById('message');
+    const ratingInput = document.getElementById('ratingValue');
+    const reviewsList = document.getElementById('reviewsList');
+
+    const nameVal = nameInput ? nameInput.value.trim() : 'Anonymous';
+    const courseVal = courseSelect ? courseSelect.value : 'General';
+    const messageVal = messageInput ? messageInput.value.trim() : '';
+    const ratingVal = ratingInput ? parseInt(ratingInput.value, 10) : 5;
 
     // Animate button to show loading state
-    const btn = form.querySelector('button');
+    const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting Review...';
     btn.disabled = true;
 
     // Simulate API call for form submission
     setTimeout(() => {
+        // Create new review card and prepend to list
+        if (reviewsList) {
+            const initials = nameVal.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'ST';
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= ratingVal) {
+                    starsHtml += '<i class="fa-solid fa-star"></i>';
+                } else {
+                    starsHtml += '<i class="fa-regular fa-star"></i>';
+                }
+            }
+
+            const newCard = document.createElement('div');
+            newCard.className = 'review-item-card';
+            newCard.style.animation = 'fadeIn 0.5s ease';
+            newCard.innerHTML = `
+                <div class="review-item-header">
+                    <div class="review-author-info">
+                        <div class="review-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">${initials}</div>
+                        <div>
+                            <div class="review-author-name">${escapeHtml(nameVal)} <span class="badge" style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; border-radius: 12px; margin-left: 0.3rem;">Just Now</span></div>
+                            <div class="review-course-tag"><i class="fa-solid fa-graduation-cap text-accent"></i> ${escapeHtml(courseVal)}</div>
+                        </div>
+                    </div>
+                    <div class="review-item-stars">
+                        ${starsHtml}
+                    </div>
+                </div>
+                <p class="review-item-text">
+                    "${escapeHtml(messageVal)}"
+                </p>
+            `;
+
+            reviewsList.prepend(newCard);
+        }
+
         form.reset();
+        const starWidget = document.getElementById('starRatingWidget');
+        if (starWidget) {
+            const stars = starWidget.querySelectorAll('i');
+            stars.forEach(s => s.classList.add('active'));
+            const ratingHidden = document.getElementById('ratingValue');
+            if (ratingHidden) ratingHidden.value = 5;
+            const display = document.getElementById('ratingScoreDisplay');
+            if (display) display.textContent = "5.0 / 5.0 (Excellent)";
+        }
+
         btn.innerHTML = originalText;
         btn.disabled = false;
 
         if (successMessage) {
             successMessage.style.display = 'flex';
-            // Hide success message automatically after 5 seconds
             setTimeout(() => {
                 successMessage.style.display = 'none';
-            }, 5000);
+            }, 6000);
         }
-    }, 1500);
+    }, 1000);
+}
+
+function escapeHtml(str) {
+    return str.replace(/[&<>'"]/g, 
+        tag => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        }[tag] || tag)
+    );
 }
 
 /* ==========================================================
@@ -1015,5 +1143,55 @@ function initNotesFeatures() {
         }
     });
 }
+
+// 4. Course-wise WhatsApp Channels Modal Controller
+function initCourseChannelsModal() {
+    const floatingBtn = document.getElementById('floatingNotesBtn');
+    const channelModal = document.getElementById('courseChannelsModal');
+    const closeBtn = document.getElementById('channelModalCloseBtn');
+
+    if (!channelModal) return;
+
+    function openModal() {
+        channelModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        channelModal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
+    if (floatingBtn) {
+        floatingBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    channelModal.addEventListener('click', (e) => {
+        if (e.target === channelModal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && channelModal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    // Close modal when jumping to course notes
+    channelModal.querySelectorAll('.channel-notes-jump').forEach(btn => {
+        btn.addEventListener('click', () => {
+            closeModal();
+        });
+    });
+}
+
 
 

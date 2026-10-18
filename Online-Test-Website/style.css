@@ -1959,3 +1959,689 @@ h3 {
         display: none;
     }
 }
+
+
+/* Responsive Floating See Notes Button */
+.floating-notes-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-notes-btn:hover {
+    transform: translateY(-4px);
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* See Notes Tooltip */
+.notes-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: #1f2937;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    font-size: 14px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.floating-notes-btn:hover .notes-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .floating-notes-btn {
+        right: 15px;
+        bottom: 20px;
+        width: 54px;
+        height: 54px;
+        font-size: 23px;
+    }
+
+    .notes-tooltip {
+        right: 62px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .floating-notes-btn {
+        right: 12px;
+        bottom: 15px;
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .notes-tooltip {
+        right: 56px;
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}
+
+/* ==========================================================================
+   ABOUT SECTION ENHANCEMENTS
+   ========================================================================== */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-hero-card {
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+}
+
+.about-stat-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-glass);
+    border-radius: 14px;
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about-stat-box:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-stat-number {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+}
+
+.about-stat-label {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.about-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.about-feature-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.about-feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.about-feature-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.about-subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.about-subject-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: 14px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-subject-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+.about-subject-card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.about-subject-card p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1rem;
+}
+
+.about-tag {
+    font-size: 0.76rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 20px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #c4b5fd;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.about-quote-card {
+    padding: 2rem 2.5rem;
+    border-left: 4px solid var(--accent-primary);
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.1), transparent);
+    border-radius: 0 16px 16px 0;
+}
+
+.about-creator-card {
+    padding: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.08));
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 18px;
+}
+
+.about-creator-info {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.about-creator-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
+    flex-shrink: 0;
+}
+
+.about-creator-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .about-hero-card {
+        padding: 1.8rem;
+    }
+
+    .about-creator-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-creator-actions {
+        width: 100%;
+    }
+
+    .about-creator-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   COURSE CHANNELS MODAL (SEE NOTES)
+   ========================================================================== */
+.channel-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 15, 30, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 1.5rem;
+    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.channel-modal-backdrop.show {
+    display: flex;
+}
+
+.channel-modal-card {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 960px;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(139, 92, 246, 0.15);
+    animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.channel-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 1.8rem;
+    background: rgba(30, 41, 59, 0.7);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.channel-modal-header h3 {
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0;
+}
+
+.channel-modal-body {
+    padding: 1.8rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Main Channel Banner */
+.channel-main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 1.4rem 1.6rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(59, 130, 246, 0.12));
+    border: 1px solid rgba(37, 211, 102, 0.35);
+}
+
+.channel-main-info {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.channel-main-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.45);
+    flex-shrink: 0;
+}
+
+/* Course-wise Channels Grid */
+.course-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.course-channel-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid var(--border-glass);
+    border-radius: 14px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: var(--transition);
+}
+
+.course-channel-card:hover {
+    transform: translateY(-4px);
+    background: rgba(30, 41, 59, 0.9);
+    border-color: var(--accent-primary);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.course-channel-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.course-channel-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.course-channel-meta h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.course-channel-meta p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.course-channel-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.course-channel-actions .btn {
+    flex: 1;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-decoration: none;
+}
+
+.btn-whatsapp-channel {
+    background: #25d366;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: var(--transition);
+}
+
+.btn-whatsapp-channel:hover {
+    background: #22c35e;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .channel-modal-card {
+        max-height: 94vh;
+    }
+    
+    .channel-modal-body {
+        padding: 1.2rem;
+    }
+
+    .channel-main-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .channel-main-banner .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   STUDENT REVIEWS & RATINGS SECTION
+   ========================================================================== */
+.reviews-section-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.reviews-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .reviews-split-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.star-rating-widget {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.star-rating-widget i {
+    font-size: 1.6rem;
+    color: #475569;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.star-rating-widget i.active,
+.star-rating-widget i.hovered {
+    color: #f59e0b;
+    transform: scale(1.15);
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.rating-score-display {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f59e0b;
+    margin-left: 0.6rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group select option {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+/* Reviews Summary Card */
+.reviews-summary-card {
+    padding: 1.6rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(139, 92, 246, 0.08));
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 16px;
+}
+
+.reviews-score-block {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.reviews-big-score {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #f59e0b;
+}
+
+.reviews-stars-row {
+    color: #f59e0b;
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+}
+
+.reviews-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.review-item-card {
+    padding: 1.35rem 1.5rem;
+    background: rgba(30, 41, 59, 0.55);
+    border: 1px solid var(--border-glass);
+    border-radius: 14px;
+    transition: var(--transition);
+}
+
+.review-item-card:hover {
+    background: rgba(30, 41, 59, 0.85);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.review-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.review-author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.review-author-name {
+    font-weight: 600;
+    font-size: 0.98rem;
+}
+
+.review-course-tag {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.review-item-stars {
+    color: #f59e0b;
+    font-size: 0.92rem;
+}
+
+.review-item-text {
+    font-size: 0.93rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+
+

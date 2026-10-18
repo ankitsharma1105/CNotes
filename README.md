@@ -11,7 +11,9 @@ Welcome to **CNotes**, a premium Single-Page Application (SPA) designed to provi
   - Business Information Technology (B-IT)
   - Big Byte (BB)
   - Advanced Engineering (ADVE)
-- **Online Assessments**: Integrated test portals with motivational thoughts to help students excel in their exams.
+  - TallyPrime & GST Accounting (Tally)
+  - Digital Marketing & SEO (DM)
+- **Online Assessments**: 120 curated online examination papers (20 comprehensive assessments each for DS, B-IT, BB, ADVE, Tally, and Digital Marketing) with timers, marks, and motivational guidance.
 - **Responsive Design**: Fully optimized for seamless viewing across mobile, tablet, and desktop devices.
 - **Interactive Feedback System**: Built-in feedback form with animated submission states.
 
