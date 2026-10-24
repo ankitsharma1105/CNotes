@@ -29,34 +29,51 @@
             <a href="#" class="logo" data-navigate="home">
                 <i class="fa-solid fa-layer-group"></i> CNotes
             </a>
-            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation" type="button">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#" class="nav-item active" data-navigate="home" data-target="home">Home</a></li>
                 <li><a href="#" class="nav-item" data-navigate="about" data-target="about">About</a></li>
                 <li class="dropdown">
-                    <a href="#" class="nav-item" data-navigate="content" data-target="content">Content <i
-                            class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#" class="nav-item dropdown-toggle-link" data-navigate="content" data-target="content">
+                        <span>Content</span>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" data-navigate="content-ds">DS</a></li>
-                        <li><a href="#" data-navigate="content-bit">B-IT</a></li>
-                        <li><a href="#" data-navigate="content-bb">BB</a></li>
-                        <li><a href="#" data-navigate="content-adve">ADVE</a></li>
-                        <li><a href="#" data-navigate="content-tally">Tally</a></li>
-                        <li><a href="#" data-navigate="content-dm">Digital Marketing</a></li>
+                        <li><a href="#" data-navigate="content"><i class="fa-solid fa-book-open"></i> All Content</a>
+                        </li>
+                        <li><a href="#" data-navigate="content-ds"><i class="fa-solid fa-laptop-code"></i> DS (Data
+                                Science)</a></li>
+                        <li><a href="#" data-navigate="content-bit"><i class="fa-solid fa-microchip"></i> B-IT (Basic
+                                IT)</a></li>
+                        <li><a href="#" data-navigate="content-bb"><i class="fa-solid fa-briefcase"></i> BB (Business
+                                Basics)</a></li>
+                        <li><a href="#" data-navigate="content-adve"><i class="fa-solid fa-file-excel"></i> ADVE (Adv.
+                                Excel)</a></li>
+                        <li><a href="#" data-navigate="content-tally"><i class="fa-solid fa-calculator"></i> Tally
+                                Prime</a></li>
+                        <li><a href="#" data-navigate="content-dm"><i class="fa-solid fa-bullhorn"></i> Digital
+                                Marketing</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="nav-item" data-navigate="tests" data-target="tests">Online Test <i
-                            class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#" class="nav-item dropdown-toggle-link" data-navigate="tests" data-target="tests">
+                        <span>Online Test</span>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" data-navigate="test-ds">DS Test</a></li>
-                        <li><a href="#" data-navigate="test-bit">B-IT Test</a></li>
-                        <li><a href="#" data-navigate="test-bb">BB Test</a></li>
-                        <li><a href="#" data-navigate="test-adve">ADVE Test</a></li>
-                        <li><a href="#" data-navigate="test-tally">Tally Test</a></li>
-                        <li><a href="#" data-navigate="test-dm">Digital Marketing Test</a></li>
+                        <li><a href="#" data-navigate="tests"><i class="fa-solid fa-list-check"></i> All Tests</a></li>
+                        <li><a href="#" data-navigate="test-ds"><i class="fa-solid fa-laptop-code"></i> DS Test</a></li>
+                        <li><a href="#" data-navigate="test-bit"><i class="fa-solid fa-microchip"></i> B-IT Test</a>
+                        </li>
+                        <li><a href="#" data-navigate="test-bb"><i class="fa-solid fa-briefcase"></i> BB Test</a></li>
+                        <li><a href="#" data-navigate="test-adve"><i class="fa-solid fa-file-excel"></i> ADVE Test</a>
+                        </li>
+                        <li><a href="#" data-navigate="test-tally"><i class="fa-solid fa-calculator"></i> Tally Test</a>
+                        </li>
+                        <li><a href="#" data-navigate="test-dm"><i class="fa-solid fa-bullhorn"></i> Digital Marketing
+                                Test</a></li>
                     </ul>
                 </li>
                 <li><a href="#" class="nav-item" data-navigate="feedback" data-target="feedback">Feedback</a></li>
@@ -313,7 +330,7 @@
                         Philosophy</span>
                 </div>
 
-                <!-- 5. Creator & Community Connect -->
+                <!-- 5. Creator & Professional Connect -->
                 <div class="about-creator-card">
                     <div class="about-creator-info">
                         <div class="about-creator-avatar">
@@ -322,10 +339,28 @@
                         <div>
                             <span class="badge category-badge mb-1">Founder & Lead Curator</span>
                             <h3 style="margin-bottom: 0.25rem;">Created by Ankit Sharma</h3>
-                            <p class="text-secondary" style="font-size: 0.95rem; max-width: 520px;">
-                                Dedicated to building accessible, high-standard digital learning materials and
-                                examination systems for computer science and commerce students worldwide.
+                            <p class="text-secondary"
+                                style="font-size: 0.95rem; max-width: 540px; margin-bottom: 0.85rem;">
+                                Dedicated to building accessible, high-standard digital learning materials, interactive
+                                examinations, and open-source educational resources for students worldwide.
                             </p>
+                            <!-- Social Connect Badges -->
+                            <div class="creator-social-links">
+                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                    class="social-pill github-pill" title="GitHub Account">
+                                    <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                                </a>
+                                <a href="https://in.linkedin.com/in/ankitsharma1105" target="_blank"
+                                    rel="noopener noreferrer" class="social-pill linkedin-pill"
+                                    title="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
+                                </a>
+                                <a href="https://whatsapp.com/channel/0029Vb85Y3v89iniFBAnAS2I" target="_blank"
+                                    rel="noopener noreferrer" class="social-pill whatsapp-pill"
+                                    title="WhatsApp Channel">
+                                    <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Channel</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="about-creator-actions">
@@ -335,9 +370,83 @@
                         <button class="btn btn-primary btn-sm" data-navigate="tests">
                             <i class="fa-solid fa-stopwatch"></i> Practice Tests
                         </button>
+                    </div>
+                </div>
+
+                <!-- 6. Connect & Social Channels Showcase Grid -->
+                <div class="about-social-section mt-4">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div>
+                            <span class="badge category-badge mb-1"><i class="fa-solid fa-share-nodes"></i> Connect &
+                                Collaborate</span>
+                            <h2>Connect With Us</h2>
+                            <p class="text-secondary">Explore open-source code repositories, connect on professional
+                                networks, and join our student community:</p>
+                        </div>
+                    </div>
+
+                    <div class="about-social-grid">
+                        <!-- GitHub Profile Card -->
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                            class="glass-card social-profile-card github-card">
+                            <div class="social-card-top">
+                                <div class="social-icon-wrapper github-icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <span class="social-ext-badge"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                            <div class="social-card-body">
+                                <h4>GitHub Account</h4>
+                                <p>Explore our open-source repositories, platform source code, algorithms, and
+                                    collaborative projects.</p>
+                            </div>
+                            <div class="social-card-footer">
+                                <span class="social-btn-label"><i class="fa-brands fa-github"></i> View GitHub Profile
+                                    <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Profile Card -->
+                        <a href="https://in.linkedin.com/in/ankitsharma1105" target="_blank" rel="noopener noreferrer"
+                            class="glass-card social-profile-card linkedin-card">
+                            <div class="social-card-top">
+                                <div class="social-icon-wrapper linkedin-icon">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                                <span class="social-ext-badge"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                            <div class="social-card-body">
+                                <h4>LinkedIn Profile</h4>
+                                <p>Connect on LinkedIn for professional updates, educational milestones, skill
+                                    endorsements, and career networking.</p>
+                            </div>
+                            <div class="social-card-footer">
+                                <span class="social-btn-label"><i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+                                    <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp Community Channel Card -->
                         <a href="https://whatsapp.com/channel/0029Vb85Y3v89iniFBAnAS2I" target="_blank"
-                            rel="noopener noreferrer" class="btn btn-sm" style="background: #25D366; color: #fff;">
-                            <i class="fa-brands fa-whatsapp"></i> Join Channel
+                            rel="noopener noreferrer" class="glass-card social-profile-card whatsapp-card">
+                            <div class="social-card-top">
+                                <div class="social-icon-wrapper whatsapp-icon">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <span class="social-ext-badge"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </div>
+                            <div class="social-card-body">
+                                <h4>WhatsApp Channel</h4>
+                                <p>Join our student broadcast channel for real-time announcements, test dates, and
+                                    instant study notes.</p>
+                            </div>
+                            <div class="social-card-footer">
+                                <span class="social-btn-label"><i class="fa-brands fa-whatsapp"></i> Join Community <i
+                                        class="fa-solid fa-arrow-right"></i></span>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -411,209 +520,53 @@
                         on Google Drive.</p>
                 </div>
                 <div class="course-banner-stats">
-                    <div class="course-stat-pill"><i class="fa-solid fa-book-open"></i> 5 Core Modules</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-folder-open"></i> Complete Notes Module</div>
                     <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
-                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> PDF & Jupyter</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> All Units Included</div>
                     <button class="btn btn-primary btn-sm" data-navigate="test-ds">
                         <i class="fa-solid fa-pen-to-square"></i> Take DS Test
                     </button>
                 </div>
             </div>
 
-            <!-- Search & Filter Controls -->
-            <div class="glass-card notes-controls-card">
-                <div class="notes-search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="notes-search-input" data-filter-target="ds-notes-grid"
-                        placeholder="Search Data Science notes by topic (e.g. Pandas, Regression, Statistics)...">
-                </div>
-                <div class="notes-filter-chips" data-filter-target="ds-notes-grid">
-                    <span class="filter-chip active" data-filter="all">All Notes (6)</span>
-                    <span class="filter-chip" data-filter="Python">Python & NumPy</span>
-                    <span class="filter-chip" data-filter="EDA">EDA & Viz</span>
-                    <span class="filter-chip" data-filter="Statistics">Statistics</span>
-                    <span class="filter-chip" data-filter="ML">Machine Learning</span>
-                    <span class="filter-chip" data-filter="Cheatsheet">Cheatsheet</span>
-                </div>
-            </div>
-
-            <!-- Notes Cards Grid -->
-            <div class="notes-grid" id="ds-notes-grid">
-                <!-- Module 1 -->
-                <div class="glass-card note-card" data-category="Python">
+            <!-- Single Course Notes Module -->
+            <div class="notes-single-wrapper">
+                <div class="glass-card single-module-card">
                     <div class="note-card-top">
-                        <span class="unit-tag">Module 01</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.2 MB</span>
+                        <span class="unit-tag"><i class="fa-solid fa-book-bookmark"></i> Complete Study Module</span>
+                        <span class="format-tag"><i class="fa-brands fa-google-drive" style="color: #34d399;"></i>
+                            Google Drive Folder</span>
                     </div>
-                    <h3 class="note-title">Python for Data Science & Pandas</h3>
-                    <p class="note-desc">Comprehensive guide on Python data structures, NumPy vectorized operations,
-                        Pandas DataFrame wrangling, and missing data imputation.</p>
+                    <h3 class="note-title">Data Science (DS) — Complete Study Notes & Materials</h3>
+                    <p class="note-desc">
+                        Complete curriculum study notes for Data Science. All units, lecture slides, Python Jupyter
+                        notebooks, statistical formula sheets, and machine learning summary guides are organized inside
+                        this Google Drive folder.
+                    </p>
                     <div class="note-topics">
+                        <span class="topic-badge">Python & Pandas</span>
                         <span class="topic-badge">NumPy Arrays</span>
-                        <span class="topic-badge">DataFrames</span>
-                        <span class="topic-badge">Data Cleaning</span>
-                        <span class="topic-badge">GroupBy</span>
+                        <span class="topic-badge">Exploratory Data Analysis</span>
+                        <span class="topic-badge">Probability & Statistics</span>
+                        <span class="topic-badge">Machine Learning</span>
+                        <span class="topic-badge">Model Evaluation</span>
+                        <span class="topic-badge">SQL & Cheatsheet</span>
                     </div>
                     <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 54 Pages</span>
+                        <span><i class="fa-brands fa-google-drive text-accent"></i> Google Drive Cloud</span>
+                        <span><i class="fa-solid fa-file-shield"></i> Verified Resources</span>
                         <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
                     </div>
                     <div class="note-actions">
-                        <a href="https://drive.google.com/drive/folders/1YgMvLHHWxH8aTYBLiUXBimOzVleleidE?usp=drive_link" target="_blank" class="btn btn-gdrive"
+                        <!-- GOOGLE DRIVE URL -->
+                        <a href="https://drive.google.com/drive/folders/1YgMvLHHWxH8aTYBLiUXBimOzVleleidE?usp=drive_link"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-gdrive"
                             title="Open on Google Drive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                            <i class="fa-brands fa-google-drive"></i> Open Google Drive Notes
                         </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 01: Python & Pandas"
+                        <button class="btn btn-outline btn-preview" data-doc-title="Data Science (DS) Complete Notes"
                             data-doc-url="https://drive.google.com/drive/folders/1YgMvLHHWxH8aTYBLiUXBimOzVleleidE?usp=drive_link">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Module 2 -->
-                <div class="glass-card note-card" data-category="EDA">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Module 02</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.8 MB</span>
-                    </div>
-                    <h3 class="note-title">Exploratory Data Analysis (EDA) & Visualization</h3>
-                    <p class="note-desc">Visual analytics using Matplotlib, Seaborn, and Plotly. Boxplots, correlation
-                        heatmaps, feature engineering, and distribution analysis.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Matplotlib</span>
-                        <span class="topic-badge">Seaborn</span>
-                        <span class="topic-badge">Outlier Removal</span>
-                        <span class="topic-badge">Feature Scaling</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 46 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 02: EDA & Visualization"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Module 3 -->
-                <div class="glass-card note-card" data-category="Statistics">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Module 03</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 3.9 MB</span>
-                    </div>
-                    <h3 class="note-title">Probability & Applied Statistics</h3>
-                    <p class="note-desc">Core mathematical foundations: descriptive statistics, probability
-                        distributions (Normal, Binomial), hypothesis testing, p-values, and A/B testing.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Hypothesis Testing</span>
-                        <span class="topic-badge">Central Limit Theorem</span>
-                        <span class="topic-badge">Z-Test & T-Test</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 62 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 03: Statistics for DS"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Module 4 -->
-                <div class="glass-card note-card" data-category="ML">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Module 04</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.5 MB</span>
-                    </div>
-                    <h3 class="note-title">Machine Learning Algorithms</h3>
-                    <p class="note-desc">Mathematical derivations and Scikit-Learn code for Linear Regression, Logistic
-                        Regression, Decision Trees, Random Forests, SVM, and K-Means clustering.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Scikit-Learn</span>
-                        <span class="topic-badge">Supervised ML</span>
-                        <span class="topic-badge">Unsupervised ML</span>
-                        <span class="topic-badge">Cross-Validation</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 78 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 04: Machine Learning"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Module 5 -->
-                <div class="glass-card note-card" data-category="ML">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Module 05</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.8 MB</span>
-                    </div>
-                    <h3 class="note-title">Model Evaluation, Tuning & Metrics</h3>
-                    <p class="note-desc">Confusion matrix, Precision, Recall, F1-Score, ROC-AUC curve, Bias-Variance
-                        tradeoff, GridSearch, and model deployment pipelines.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">ROC-AUC</span>
-                        <span class="topic-badge">Hyperparameter Tuning</span>
-                        <span class="topic-badge">Pipeline</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 40 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DS Module 05: Model Evaluation"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Bonus Cheatsheet -->
-                <div class="glass-card note-card" data-category="Cheatsheet">
-                    <div class="note-card-top">
-                        <span class="unit-tag"
-                            style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Bonus</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 2.1 MB</span>
-                    </div>
-                    <h3 class="note-title">DS One-Shot Cheatsheet & SQL Handbook</h3>
-                    <p class="note-desc">Quick formula summaries, Scikit-Learn code snippets, 50+ essential SQL
-                        analytical queries, and interview Q&A revision sheets.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Quick Revision</span>
-                        <span class="topic-badge">SQL Queries</span>
-                        <span class="topic-badge">Formulas</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 24 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DS One-Shot Cheatsheet"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
+                            <i class="fa-solid fa-eye"></i> Preview Notes
                         </button>
                     </div>
                 </div>
@@ -633,217 +586,52 @@
                         on Google Drive.</p>
                 </div>
                 <div class="course-banner-stats">
-                    <div class="course-stat-pill"><i class="fa-solid fa-layer-group"></i> 5 Comprehensive Units</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-folder-open"></i> Complete Notes Module</div>
                     <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
-                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> High-Quality PDF</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> All Units Included</div>
                     <button class="btn btn-primary btn-sm" data-navigate="test-bit">
                         <i class="fa-solid fa-stopwatch"></i> Practice B-IT Tests
                     </button>
                 </div>
             </div>
 
-            <!-- Search & Filter Controls -->
-            <div class="glass-card notes-controls-card">
-                <div class="notes-search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="notes-search-input" data-filter-target="bit-notes-grid"
-                        placeholder="Search B-IT notes by topic (e.g. CPU, RAM, Networking, Excel, Windows)...">
-                </div>
-                <div class="notes-filter-chips" data-filter-target="bit-notes-grid">
-                    <span class="filter-chip active" data-filter="all">All Notes (6)</span>
-                    <span class="filter-chip" data-filter="Hardware">Unit 1: Hardware</span>
-                    <span class="filter-chip" data-filter="OS">Unit 2: Operating Systems</span>
-                    <span class="filter-chip" data-filter="Networking">Unit 3: Networking</span>
-                    <span class="filter-chip" data-filter="Office">Unit 4: MS Office</span>
-                    <span class="filter-chip" data-filter="Security">Unit 5: Security & Cloud</span>
-                    <span class="filter-chip" data-filter="Cheatsheet">Cheatsheet</span>
-                </div>
-            </div>
-
-            <!-- Notes Cards Grid -->
-            <div class="notes-grid" id="bit-notes-grid">
-                <!-- Unit 1 -->
-                <div class="glass-card note-card" data-category="Hardware">
+            <!-- Single Course Notes Module -->
+            <div class="notes-single-wrapper">
+                <div class="glass-card single-module-card">
                     <div class="note-card-top">
-                        <span class="unit-tag">Unit 01</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 3.8 MB</span>
+                        <span class="unit-tag"><i class="fa-solid fa-book-bookmark"></i> Complete Study Module</span>
+                        <span class="format-tag"><i class="fa-brands fa-google-drive" style="color: #34d399;"></i>
+                            Google Drive Folder</span>
                     </div>
-                    <h3 class="note-title">Computer Fundamentals & Hardware Architecture</h3>
-                    <p class="note-desc">Comprehensive breakdown of Computer Generations, Von Neumann architecture, CPU
-                        functional blocks (ALU, CU, Registers), Cache memory, and I/O devices.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">CPU & ALU</span>
-                        <span class="topic-badge">RAM vs ROM</span>
-                        <span class="topic-badge">Storage Units</span>
-                        <span class="topic-badge">Motherboard</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 48 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive"
-                            title="Google Drive Link">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview"
-                            data-doc-title="B-IT Unit 01: Computer Hardware & CPU"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 2 -->
-                <div class="glass-card note-card" data-category="OS">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 02</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.1 MB</span>
-                    </div>
-                    <h3 class="note-title">Operating Systems & Software Engineering</h3>
-                    <p class="note-desc">System software vs application software, Windows OS administration, Linux shell
-                        fundamentals, process scheduling, memory allocation, and file systems (NTFS, FAT32).</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Windows 11</span>
-                        <span class="topic-badge">Linux Commands</span>
-                        <span class="topic-badge">File Systems</span>
-                        <span class="topic-badge">Device Drivers</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 42 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 02: Operating Systems"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 3 -->
-                <div class="glass-card note-card" data-category="Networking">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 03</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.2 MB</span>
-                    </div>
-                    <h3 class="note-title">Computer Networks & Internet Protocols</h3>
-                    <p class="note-desc">Data communication, network topologies (Star, Mesh, Bus), LAN/MAN/WAN, OSI
-                        7-Layer model, TCP/IP, IP addressing (IPv4 vs IPv6), DNS, and web protocols (HTTP, HTTPS, FTP).
+                    <h3 class="note-title">Basic Information Technology (B-IT) — Complete Study Notes</h3>
+                    <p class="note-desc">
+                        Comprehensive study notes covering all B-IT units: Computer fundamentals & CPU architecture,
+                        Operating systems (Windows/Linux), Networking protocols, MS Office suite, and Cybersecurity
+                        hygiene.
                     </p>
                     <div class="note-topics">
-                        <span class="topic-badge">LAN & WAN</span>
-                        <span class="topic-badge">TCP/IP Protocol</span>
-                        <span class="topic-badge">OSI Model</span>
-                        <span class="topic-badge">IP Addressing</span>
+                        <span class="topic-badge">Hardware & CPU</span>
+                        <span class="topic-badge">RAM vs ROM</span>
+                        <span class="topic-badge">Operating Systems</span>
+                        <span class="topic-badge">Networking & OSI</span>
+                        <span class="topic-badge">MS Office Suite</span>
+                        <span class="topic-badge">Cybersecurity</span>
+                        <span class="topic-badge">Shortcuts & Glossary</span>
                     </div>
                     <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 56 Pages</span>
+                        <span><i class="fa-brands fa-google-drive text-accent"></i> Google Drive Cloud</span>
+                        <span><i class="fa-solid fa-file-shield"></i> Verified Resources</span>
                         <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
                     </div>
                     <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        <!-- PASTE YOUR GOOGLE DRIVE URL IN href AND data-doc-url BELOW -->
+                        <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-gdrive" title="Open on Google Drive">
+                            <i class="fa-brands fa-google-drive"></i> Open Google Drive Notes
                         </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 03: Networks & Internet"
+                        <button class="btn btn-outline btn-preview" data-doc-title="Basic IT (B-IT) Complete Notes"
                             data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 4 -->
-                <div class="glass-card note-card" data-category="Office">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 04</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.0 MB</span>
-                    </div>
-                    <h3 class="note-title">MS Office Suite & Productivity Tools</h3>
-                    <p class="note-desc">Complete handbook for Microsoft Office. Formatting in MS Word, mathematical
-                        formulas & chart creation in MS Excel, slide transitions in PowerPoint, and database tables in
-                        MS Access.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">MS Word</span>
-                        <span class="topic-badge">Excel Formulas</span>
-                        <span class="topic-badge">PowerPoint</span>
-                        <span class="topic-badge">Mail Merge</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 64 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 04: MS Office Suite"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 5 -->
-                <div class="glass-card note-card" data-category="Security">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 05</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 3.5 MB</span>
-                    </div>
-                    <h3 class="note-title">Cybersecurity, Cloud Storage & Trends</h3>
-                    <p class="note-desc">Protection against viruses, malware, trojans, ransomware and phishing scams.
-                        Antivirus architectures, Firewalls, Cloud Storage concepts (Google Drive, OneDrive), and
-                        emerging AI tools.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Antivirus & Firewall</span>
-                        <span class="topic-badge">Phishing & Security</span>
-                        <span class="topic-badge">Google Drive</span>
-                        <span class="topic-badge">Cloud Computing</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 38 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT Unit 05: Cybersecurity & Cloud"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Bonus Cheatsheet -->
-                <div class="glass-card note-card" data-category="Cheatsheet">
-                    <div class="note-card-top">
-                        <span class="unit-tag"
-                            style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Bonus</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 1.8 MB</span>
-                    </div>
-                    <h3 class="note-title">B-IT One-Shot Revision & Shortcut Keys</h3>
-                    <p class="note-desc">Quick revision notes before exams. Includes all universal Windows shortcuts
-                        (Ctrl+A to Ctrl+Z), function keys (F1-F12), essential acronyms, and computer glossary.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Shortcut Keys</span>
-                        <span class="topic-badge">Full Forms</span>
-                        <span class="topic-badge">Glossary</span>
-                        <span class="topic-badge">Exam Ready</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 18 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="B-IT One-Shot Shortcut & Glossary"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
+                            <i class="fa-solid fa-eye"></i> Preview Notes
                         </button>
                     </div>
                 </div>
@@ -863,175 +651,52 @@
                         NoSQL databases.</p>
                 </div>
                 <div class="course-banner-stats">
-                    <div class="course-stat-pill"><i class="fa-solid fa-database"></i> 5 Modules</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-folder-open"></i> Complete Notes Module</div>
                     <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
-                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> PDF Resources</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> All Units Included</div>
                     <button class="btn btn-primary btn-sm" data-navigate="test-bb">
                         <i class="fa-solid fa-chart-pie"></i> Practice BB Tests
                     </button>
                 </div>
             </div>
 
-            <!-- Search & Filter Controls -->
-            <div class="glass-card notes-controls-card">
-                <div class="notes-search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="notes-search-input" data-filter-target="bb-notes-grid"
-                        placeholder="Search BB notes (e.g. Hadoop, HDFS, Spark, NoSQL, MongoDB)...">
-                </div>
-                <div class="notes-filter-chips" data-filter-target="bb-notes-grid">
-                    <span class="filter-chip active" data-filter="all">All Notes (5)</span>
-                    <span class="filter-chip" data-filter="Hadoop">Hadoop & HDFS</span>
-                    <span class="filter-chip" data-filter="Spark">Apache Spark</span>
-                    <span class="filter-chip" data-filter="NoSQL">NoSQL DBs</span>
-                    <span class="filter-chip" data-filter="Analytics">Analytics</span>
-                </div>
-            </div>
-
-            <!-- Notes Cards Grid -->
-            <div class="notes-grid" id="bb-notes-grid">
-                <!-- Unit 1 -->
-                <div class="glass-card note-card" data-category="Hadoop">
+            <!-- Single Course Notes Module -->
+            <div class="notes-single-wrapper">
+                <div class="glass-card single-module-card">
                     <div class="note-card-top">
-                        <span class="unit-tag">Unit 01</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.5 MB</span>
+                        <span class="unit-tag"><i class="fa-solid fa-book-bookmark"></i> Complete Study Module</span>
+                        <span class="format-tag"><i class="fa-brands fa-google-drive" style="color: #34d399;"></i>
+                            Google Drive Folder</span>
                     </div>
-                    <h3 class="note-title">Big Data Concepts & HDFS Architecture</h3>
-                    <p class="note-desc">The 5 V's of Big Data (Volume, Velocity, Variety, Veracity, Value). Hadoop
-                        Distributed File System (HDFS), NameNode, DataNode replication and fault tolerance.</p>
+                    <h3 class="note-title">Big Byte (BB) — Complete Big Data Study Notes</h3>
+                    <p class="note-desc">
+                        Full course notes for Big Byte & Big Data technologies: 5 V's of Big Data, Hadoop distributed
+                        file system (HDFS), MapReduce parallel computation, Apache Spark in-memory processing, and
+                        scalable NoSQL database designs (MongoDB, Cassandra).
+                    </p>
                     <div class="note-topics">
-                        <span class="topic-badge">5 V's of Data</span>
-                        <span class="topic-badge">HDFS Architecture</span>
-                        <span class="topic-badge">NameNode & DataNode</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 52 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 01: Big Data & HDFS"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 2 -->
-                <div class="glass-card note-card" data-category="Hadoop">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 02</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.0 MB</span>
-                    </div>
-                    <h3 class="note-title">MapReduce Framework & YARN</h3>
-                    <p class="note-desc">Distributed compute processing paradigm: Mappers, Reducers, Combiners, Shuffle
-                        & Sort mechanisms, and YARN resource management.</p>
-                    <div class="note-topics">
+                        <span class="topic-badge">5 V's of Big Data</span>
+                        <span class="topic-badge">Hadoop & HDFS</span>
                         <span class="topic-badge">MapReduce</span>
-                        <span class="topic-badge">YARN Resource Mgr</span>
-                        <span class="topic-badge">Shuffle & Sort</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 44 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 02: MapReduce & YARN"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 3 -->
-                <div class="glass-card note-card" data-category="Spark">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 03</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.2 MB</span>
-                    </div>
-                    <h3 class="note-title">Apache Spark & In-Memory Computing</h3>
-                    <p class="note-desc">High-speed in-memory analytics using Apache Spark. Resilient Distributed
-                        Datasets (RDDs), Spark DataFrames, Spark SQL, and lazy evaluation.</p>
-                    <div class="note-topics">
                         <span class="topic-badge">Apache Spark</span>
-                        <span class="topic-badge">RDDs & DataFrames</span>
-                        <span class="topic-badge">Spark SQL</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 60 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 03: Apache Spark"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 4 -->
-                <div class="glass-card note-card" data-category="NoSQL">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 04</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.9 MB</span>
-                    </div>
-                    <h3 class="note-title">NoSQL Databases & Distributed Storage</h3>
-                    <p class="note-desc">CAP Theorem, Document stores (MongoDB), Wide-column stores (Apache Cassandra),
-                        Key-Value databases, and Apache Hive data warehousing.</p>
-                    <div class="note-topics">
+                        <span class="topic-badge">NoSQL DBs</span>
                         <span class="topic-badge">MongoDB</span>
-                        <span class="topic-badge">Cassandra</span>
-                        <span class="topic-badge">CAP Theorem</span>
-                        <span class="topic-badge">Apache Hive</span>
+                        <span class="topic-badge">Data Pipelines</span>
                     </div>
                     <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 48 Pages</span>
+                        <span><i class="fa-brands fa-google-drive text-accent"></i> Google Drive Cloud</span>
+                        <span><i class="fa-solid fa-file-shield"></i> Verified Resources</span>
                         <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
                     </div>
                     <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        <!-- PASTE YOUR GOOGLE DRIVE URL IN href AND data-doc-url BELOW -->
+                        <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-gdrive" title="Open on Google Drive">
+                            <i class="fa-brands fa-google-drive"></i> Open Google Drive Notes
                         </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 04: NoSQL Databases"
+                        <button class="btn btn-outline btn-preview" data-doc-title="Big Byte (BB) Complete Notes"
                             data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 5 -->
-                <div class="glass-card note-card" data-category="Analytics">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 05</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.0 MB</span>
-                    </div>
-                    <h3 class="note-title">Real-Time Data Pipelines & Analytics</h3>
-                    <p class="note-desc">Stream ingestion with Apache Kafka, message brokers, real-time analytics
-                        dashboards, and cloud data lake architectures (AWS S3, Databricks).</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Apache Kafka</span>
-                        <span class="topic-badge">Data Lakes</span>
-                        <span class="topic-badge">Real-Time Streams</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 36 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="BB Unit 05: Data Pipelines"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
+                            <i class="fa-solid fa-eye"></i> Preview Notes
                         </button>
                     </div>
                 </div>
@@ -1051,179 +716,53 @@
                         and VBA macro automation.</p>
                 </div>
                 <div class="course-banner-stats">
-                    <div class="course-stat-pill"><i class="fa-solid fa-table"></i> 5 Comprehensive Modules</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-folder-open"></i> Complete Notes Module</div>
                     <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
-                    <div class="course-stat-pill"><i class="fa-solid fa-file-excel"></i> Workbooks & PDFs</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-excel"></i> All Units & Templates</div>
                     <button class="btn btn-primary btn-sm" data-navigate="test-adve">
                         <i class="fa-solid fa-gears"></i> Practice ADVE Tests
                     </button>
                 </div>
             </div>
 
-            <!-- Search & Filter Controls -->
-            <div class="glass-card notes-controls-card">
-                <div class="notes-search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="notes-search-input" data-filter-target="adve-notes-grid"
-                        placeholder="Search ADVE notes (e.g. XLOOKUP, Pivot, Power Query, Macros, VBA)...">
-                </div>
-                <div class="notes-filter-chips" data-filter-target="adve-notes-grid">
-                    <span class="filter-chip active" data-filter="all">All Notes (5)</span>
-                    <span class="filter-chip" data-filter="Formulas">Formulas & Arrays</span>
-                    <span class="filter-chip" data-filter="Pivot">Pivot & Power Pivot</span>
-                    <span class="filter-chip" data-filter="PowerQuery">Power Query ETL</span>
-                    <span class="filter-chip" data-filter="Dashboards">Dashboards</span>
-                    <span class="filter-chip" data-filter="VBA">VBA & Macros</span>
-                </div>
-            </div>
-
-            <!-- Notes Cards Grid -->
-            <div class="notes-grid" id="adve-notes-grid">
-                <!-- Unit 1 -->
-                <div class="glass-card note-card" data-category="Formulas">
+            <!-- Single Course Notes Module -->
+            <div class="notes-single-wrapper">
+                <div class="glass-card single-module-card">
                     <div class="note-card-top">
-                        <span class="unit-tag">Unit 01</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.2 MB</span>
+                        <span class="unit-tag"><i class="fa-solid fa-book-bookmark"></i> Complete Study Module</span>
+                        <span class="format-tag"><i class="fa-brands fa-google-drive" style="color: #34d399;"></i>
+                            Google Drive Folder</span>
                     </div>
-                    <h3 class="note-title">Master Modern Formulas & Dynamic Arrays</h3>
-                    <p class="note-desc">In-depth guide to modern functions: XLOOKUP, INDEX & MATCH, FILTER, UNIQUE,
-                        SORT, XMATCH, LET, and custom LAMBDA formulas.</p>
+                    <h3 class="note-title">Advanced Excel (ADVE) — Complete Study Notes & Templates</h3>
+                    <p class="note-desc">
+                        Comprehensive notes and practice workbooks for Advanced Excel: Modern formulas (XLOOKUP, FILTER,
+                        LAMBDA), Pivot Tables & Power Pivot DAX, automated Power Query data transformation, executive
+                        dashboard design, and VBA macros.
+                    </p>
                     <div class="note-topics">
+                        <span class="topic-badge">Modern Formulas</span>
                         <span class="topic-badge">XLOOKUP</span>
                         <span class="topic-badge">Dynamic Arrays</span>
-                        <span class="topic-badge">FILTER & UNIQUE</span>
-                        <span class="topic-badge">LAMBDA</span>
+                        <span class="topic-badge">Pivot Tables & DAX</span>
+                        <span class="topic-badge">Power Query ETL</span>
+                        <span class="topic-badge">Executive Dashboards</span>
+                        <span class="topic-badge">VBA & Macros</span>
                     </div>
                     <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 50 Pages</span>
+                        <span><i class="fa-brands fa-google-drive text-accent"></i> Google Drive Cloud</span>
+                        <span><i class="fa-solid fa-file-shield"></i> Verified Resources</span>
                         <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
                     </div>
                     <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        <!-- PASTE YOUR GOOGLE DRIVE URL IN href AND data-doc-url BELOW -->
+                        <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-gdrive" title="Open on Google Drive">
+                            <i class="fa-brands fa-google-drive"></i> Open Google Drive Notes
                         </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 01: Modern Formulas"
+                        <button class="btn btn-outline btn-preview"
+                            data-doc-title="Advanced Excel (ADVE) Complete Notes"
                             data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 2 -->
-                <div class="glass-card note-card" data-category="Pivot">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 02</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.5 MB</span>
-                    </div>
-                    <h3 class="note-title">Pivot Tables, Slicers & Power Pivot</h3>
-                    <p class="note-desc">Data summarization with Pivot Tables, calculated fields, dynamic timelines,
-                        multi-table relationships, and introduction to DAX formulas.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Pivot Tables</span>
-                        <span class="topic-badge">Slicers & Timelines</span>
-                        <span class="topic-badge">Data Model</span>
-                        <span class="topic-badge">DAX Basics</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 45 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 02: Pivot & Power Pivot"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 3 -->
-                <div class="glass-card note-card" data-category="PowerQuery">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 03</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.1 MB</span>
-                    </div>
-                    <h3 class="note-title">Power Query ETL & Data Automation</h3>
-                    <p class="note-desc">Extract, Transform, and Load (ETL) without code. Connecting to multiple
-                        folders, unpivoting columns, appending tables, and cleaning messy data.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Power Query</span>
-                        <span class="topic-badge">Automated ETL</span>
-                        <span class="topic-badge">Unpivot Columns</span>
-                        <span class="topic-badge">Merge Queries</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 58 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 03: Power Query ETL"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 4 -->
-                <div class="glass-card note-card" data-category="Dashboards">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 04</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 7.4 MB</span>
-                    </div>
-                    <h3 class="note-title">Executive Dashboards & Visualizations</h3>
-                    <p class="note-desc">Designing professional C-suite dashboards in Excel. Sparklines, dynamic chart
-                        ranges, conditional formatting heatmaps, and interactive KPI cards.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">KPI Dashboards</span>
-                        <span class="topic-badge">Dynamic Charts</span>
-                        <span class="topic-badge">Conditional Formatting</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 62 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 04: Executive Dashboards"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 5 -->
-                <div class="glass-card note-card" data-category="VBA">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 05</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.7 MB</span>
-                    </div>
-                    <h3 class="note-title">Excel VBA & Macro Automation</h3>
-                    <p class="note-desc">Writing custom macros from scratch. Visual Basic for Applications (VBA) editor,
-                        Sub & Function procedures, Loops (For, Do While), and UserForms.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">VBA Scripts</span>
-                        <span class="topic-badge">Macro Automation</span>
-                        <span class="topic-badge">UserForms</span>
-                        <span class="topic-badge">Custom Functions</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 54 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="ADVE Unit 05: Excel VBA & Macros"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
+                            <i class="fa-solid fa-eye"></i> Preview Notes
                         </button>
                     </div>
                 </div>
@@ -1243,222 +782,53 @@
                         reconciliation, and financial balance sheets in TallyPrime.</p>
                 </div>
                 <div class="course-banner-stats">
-                    <div class="course-stat-pill"><i class="fa-solid fa-calculator"></i> 6 Modules</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-folder-open"></i> Complete Notes Module</div>
                     <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
-                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> PDF & Vouchers</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> All Units Included</div>
                     <button class="btn btn-primary btn-sm" data-navigate="test-tally">
                         <i class="fa-solid fa-calculator"></i> Practice Tally Tests
                     </button>
                 </div>
             </div>
 
-            <!-- Search & Filter Controls -->
-            <div class="glass-card notes-controls-card">
-                <div class="notes-search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="notes-search-input" data-filter-target="tally-notes-grid"
-                        placeholder="Search Tally notes (e.g. Vouchers, GST, Ledgers, BRS, Inventory, Payroll)...">
-                </div>
-                <div class="notes-filter-chips" data-filter-target="tally-notes-grid">
-                    <span class="filter-chip active" data-filter="all">All Notes (6)</span>
-                    <span class="filter-chip" data-filter="Accounting">Accounting & Ledgers</span>
-                    <span class="filter-chip" data-filter="GST">GST & Invoicing</span>
-                    <span class="filter-chip" data-filter="Inventory">Inventory Control</span>
-                    <span class="filter-chip" data-filter="Banking">Banking & BRS</span>
-                    <span class="filter-chip" data-filter="Payroll">Payroll & TDS</span>
-                    <span class="filter-chip" data-filter="Cheatsheet">Shortcuts</span>
-                </div>
-            </div>
-
-            <!-- Notes Cards Grid -->
-            <div class="notes-grid" id="tally-notes-grid">
-                <!-- Unit 1 -->
-                <div class="glass-card note-card" data-category="Accounting">
+            <!-- Single Course Notes Module -->
+            <div class="notes-single-wrapper">
+                <div class="glass-card single-module-card">
                     <div class="note-card-top">
-                        <span class="unit-tag">Unit 01</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.4 MB</span>
+                        <span class="unit-tag"><i class="fa-solid fa-book-bookmark"></i> Complete Study Module</span>
+                        <span class="format-tag"><i class="fa-brands fa-google-drive" style="color: #34d399;"></i>
+                            Google Drive Folder</span>
                     </div>
-                    <h3 class="note-title">Accounting Principles & TallyPrime Essentials</h3>
-                    <p class="note-desc">Golden rules of accounting (Real, Personal, Nominal), company configuration,
-                        primary & secondary ledger groups, chart of accounts, and standard voucher entries (Contra F4,
-                        Payment F5, Receipt F6, Journal F7).</p>
+                    <h3 class="note-title">TallyPrime & GST Accounting — Complete Study Notes</h3>
+                    <p class="note-desc">
+                        Full course notes for TallyPrime: Golden rules of accounting, ledger groups, standard voucher
+                        entries (Contra, Payment, Receipt, Sales, Purchase), GST tax invoices (CGST/SGST/IGST),
+                        multi-godown inventory, bank reconciliation (BRS), and financial reporting (Balance Sheet, P&L).
+                    </p>
                     <div class="note-topics">
                         <span class="topic-badge">Golden Rules</span>
-                        <span class="topic-badge">Ledger Groups</span>
-                        <span class="topic-badge">Voucher Entries</span>
-                        <span class="topic-badge">Chart of Accounts</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 48 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview"
-                            data-doc-title="Tally Unit 01: Accounting & TallyPrime"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 2 -->
-                <div class="glass-card note-card" data-category="GST">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 02</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.9 MB</span>
-                    </div>
-                    <h3 class="note-title">Goods & Services Tax (GST) & Invoicing</h3>
-                    <p class="note-desc">Comprehensive GST taxation in TallyPrime: CGST, SGST, IGST calculation, HSN/SAC
-                        code classification, tax invoices, debit/credit notes, Input Tax Credit (ITC) reconciliation,
-                        and GSTR-1, GSTR-3B compliance.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">CGST & SGST</span>
-                        <span class="topic-badge">IGST Invoicing</span>
-                        <span class="topic-badge">HSN/SAC Codes</span>
-                        <span class="topic-badge">GSTR-1 & 3B</span>
-                        <span class="topic-badge">ITC Credit</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 62 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="Tally Unit 02: GST & Invoicing"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 3 -->
-                <div class="glass-card note-card" data-category="Inventory">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 03</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.1 MB</span>
-                    </div>
-                    <h3 class="note-title">Inventory & Multi-Godown Stock Management</h3>
-                    <p class="note-desc">Organizing inventory: stock items, stock categories, units of measurement,
-                        multiple godowns/warehouses, batch-wise details with manufacturing & expiry dates, and
-                        purchase/sales order processing.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Stock Categories</span>
-                        <span class="topic-badge">Multi-Godown</span>
-                        <span class="topic-badge">Batch & Expiry</span>
-                        <span class="topic-badge">Order Processing</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 52 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="Tally Unit 03: Inventory & Godowns"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 4 -->
-                <div class="glass-card note-card" data-category="Banking">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 04</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.8 MB</span>
-                    </div>
-                    <h3 class="note-title">Banking, BRS & Financial Statement Reports</h3>
-                    <p class="note-desc">Auto and manual Bank Reconciliation Statement (BRS), cheque book register,
-                        electronic payments, and generating critical financial reports: Trial Balance, Profit & Loss
-                        Account, Balance Sheet, and Ratio Analysis.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">BRS Reconciliation</span>
-                        <span class="topic-badge">Cheque Register</span>
+                        <span class="topic-badge">Ledger Setup</span>
+                        <span class="topic-badge">Voucher Entries (F4-F9)</span>
+                        <span class="topic-badge">GST Invoicing</span>
+                        <span class="topic-badge">Inventory & Godowns</span>
+                        <span class="topic-badge">Banking & BRS</span>
                         <span class="topic-badge">Balance Sheet</span>
-                        <span class="topic-badge">Profit & Loss</span>
+                        <span class="topic-badge">Payroll & TDS</span>
                     </div>
                     <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 56 Pages</span>
+                        <span><i class="fa-brands fa-google-drive text-accent"></i> Google Drive Cloud</span>
+                        <span><i class="fa-solid fa-file-shield"></i> Verified Resources</span>
                         <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
                     </div>
                     <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        <!-- PASTE YOUR GOOGLE DRIVE URL IN href AND data-doc-url BELOW -->
+                        <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-gdrive" title="Open on Google Drive">
+                            <i class="fa-brands fa-google-drive"></i> Open Google Drive Notes
                         </a>
-                        <button class="btn btn-outline btn-preview"
-                            data-doc-title="Tally Unit 04: Banking & Financial Reports"
+                        <button class="btn btn-outline btn-preview" data-doc-title="TallyPrime & GST Complete Notes"
                             data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 5 -->
-                <div class="glass-card note-card" data-category="Payroll">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 05</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.3 MB</span>
-                    </div>
-                    <h3 class="note-title">Payroll Management & Statutory TDS Compliance</h3>
-                    <p class="note-desc">Automated payroll setup in TallyPrime: Employee masters, attendance & leave
-                        types, salary structure pay heads (Basic, HRA, PF, ESI, gratuity), payslip printing, and Tax
-                        Deducted at Source (TDS) entries.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Employee Masters</span>
-                        <span class="topic-badge">Pay Heads Setup</span>
-                        <span class="topic-badge">Salary Slips</span>
-                        <span class="topic-badge">TDS Compliance</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 46 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="Tally Unit 05: Payroll & TDS"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Bonus Cheatsheet -->
-                <div class="glass-card note-card" data-category="Cheatsheet">
-                    <div class="note-card-top">
-                        <span class="unit-tag"
-                            style="background: rgba(236, 72, 153, 0.2); color: #f472b6; border-color: rgba(236, 72, 153, 0.4);">Bonus</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 2.2 MB</span>
-                    </div>
-                    <h3 class="note-title">TallyPrime Universal Shortcut Keys & Audit Guide</h3>
-                    <p class="note-desc">Speed up accounting with essential TallyPrime shortcuts: Alt+G (Go To), F4-F9
-                        voucher keys, Alt+C inline creation, Alt+F1/F2 period & detail toggle, data backup/restore, and
-                        export to Excel/PDF.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Alt+G GoTo</span>
-                        <span class="topic-badge">Voucher Keys F4-F9</span>
-                        <span class="topic-badge">Inline Creation</span>
-                        <span class="topic-badge">Exam Ready</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 22 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview"
-                            data-doc-title="Tally Shortcuts & Revision Cheatsheet"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
+                            <i class="fa-solid fa-eye"></i> Preview Notes
                         </button>
                     </div>
                 </div>
@@ -1478,221 +848,52 @@
                         Google Ads PPC, conversion copywriting, and web analytics (GA4).</p>
                 </div>
                 <div class="course-banner-stats">
-                    <div class="course-stat-pill"><i class="fa-solid fa-bullhorn"></i> 6 Modules</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-folder-open"></i> Complete Notes Module</div>
                     <div class="course-stat-pill"><i class="fa-brands fa-google-drive"></i> Google Drive Cloud</div>
-                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> PDF & Playbooks</div>
+                    <div class="course-stat-pill"><i class="fa-solid fa-file-pdf"></i> All Units Included</div>
                     <button class="btn btn-primary btn-sm" data-navigate="test-dm">
                         <i class="fa-solid fa-bullhorn"></i> Practice DM Tests
                     </button>
                 </div>
             </div>
 
-            <!-- Search & Filter Controls -->
-            <div class="glass-card notes-controls-card">
-                <div class="notes-search-wrapper">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="notes-search-input" data-filter-target="dm-notes-grid"
-                        placeholder="Search Digital Marketing notes (e.g. SEO, Meta Ads, Google Ads, GA4, Funnel)...">
-                </div>
-                <div class="notes-filter-chips" data-filter-target="dm-notes-grid">
-                    <span class="filter-chip active" data-filter="all">All Notes (6)</span>
-                    <span class="filter-chip" data-filter="Strategy">Strategy & Funnels</span>
-                    <span class="filter-chip" data-filter="SEO">SEO Mastery</span>
-                    <span class="filter-chip" data-filter="SMM">Social Media (SMM)</span>
-                    <span class="filter-chip" data-filter="GoogleAds">Google Ads PPC</span>
-                    <span class="filter-chip" data-filter="Content">Content & Email</span>
-                    <span class="filter-chip" data-filter="Analytics">Web Analytics (GA4)</span>
-                </div>
-            </div>
-
-            <!-- Notes Cards Grid -->
-            <div class="notes-grid" id="dm-notes-grid">
-                <!-- Unit 1 -->
-                <div class="glass-card note-card" data-category="Strategy">
+            <!-- Single Course Notes Module -->
+            <div class="notes-single-wrapper">
+                <div class="glass-card single-module-card">
                     <div class="note-card-top">
-                        <span class="unit-tag">Unit 01</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.1 MB</span>
+                        <span class="unit-tag"><i class="fa-solid fa-book-bookmark"></i> Complete Study Module</span>
+                        <span class="format-tag"><i class="fa-brands fa-google-drive" style="color: #34d399;"></i>
+                            Google Drive Folder</span>
                     </div>
-                    <h3 class="note-title">Digital Marketing Strategy & Growth Funnels</h3>
-                    <p class="note-desc">Foundational concepts of modern digital marketing: Traditional vs digital
-                        paradigms, inbound vs outbound strategies, buyer persona modeling, customer journey mapping, and
-                        the AIDA conversion funnel.</p>
+                    <h3 class="note-title">Digital Marketing (DM) — Complete Study Notes</h3>
+                    <p class="note-desc">
+                        Comprehensive digital marketing notes covering all modern channels: Inbound growth strategy &
+                        customer funnels, On-Page & Technical SEO, Meta Ads Manager (Facebook/Instagram), Google Search
+                        Ads & PPC, Email automation & copywriting, and GA4 web analytics.
+                    </p>
                     <div class="note-topics">
                         <span class="topic-badge">Marketing Funnels</span>
-                        <span class="topic-badge">Inbound Strategy</span>
-                        <span class="topic-badge">Buyer Persona</span>
-                        <span class="topic-badge">Customer Journey</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 46 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview"
-                            data-doc-title="DM Unit 01: Strategy & Growth Funnels"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 2 -->
-                <div class="glass-card note-card" data-category="SEO">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 02</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 6.3 MB</span>
-                    </div>
-                    <h3 class="note-title">Search Engine Optimization (SEO) Masterclass</h3>
-                    <p class="note-desc">Drive high-intent organic traffic: Keyword search volume & intent analysis,
-                        On-Page SEO (title tags, meta descriptions, semantic headings), Technical SEO (sitemaps,
-                        robots.txt, Core Web Vitals), and white-hat backlink building.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Keyword Research</span>
-                        <span class="topic-badge">On-Page SEO</span>
-                        <span class="topic-badge">Technical SEO</span>
-                        <span class="topic-badge">Backlinks</span>
-                        <span class="topic-badge">Core Web Vitals</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 64 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DM Unit 02: SEO Masterclass"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 3 -->
-                <div class="glass-card note-card" data-category="SMM">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 03</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.7 MB</span>
-                    </div>
-                    <h3 class="note-title">Social Media Marketing (SMM) & Paid Social</h3>
-                    <p class="note-desc">Organic brand building and targeted ad campaigns: Meta Ads Manager (Facebook &
-                        Instagram), custom & lookalike audiences, Instagram Reels growth algorithms, LinkedIn B2B lead
-                        generation, and social listening.</p>
-                    <div class="note-topics">
+                        <span class="topic-badge">On-Page & Technical SEO</span>
                         <span class="topic-badge">Meta Ads Manager</span>
-                        <span class="topic-badge">Lookalike Audiences</span>
-                        <span class="topic-badge">Instagram Strategy</span>
-                        <span class="topic-badge">LinkedIn B2B</span>
+                        <span class="topic-badge">Google Ads PPC</span>
+                        <span class="topic-badge">Copywriting & Email</span>
+                        <span class="topic-badge">GA4 Web Analytics</span>
+                        <span class="topic-badge">Conversion Optimization</span>
                     </div>
                     <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 58 Pages</span>
+                        <span><i class="fa-brands fa-google-drive text-accent"></i> Google Drive Cloud</span>
+                        <span><i class="fa-solid fa-file-shield"></i> Verified Resources</span>
                         <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
                     </div>
                     <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
+                        <!-- PASTE YOUR GOOGLE DRIVE URL IN href AND data-doc-url BELOW -->
+                        <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-gdrive" title="Open on Google Drive">
+                            <i class="fa-brands fa-google-drive"></i> Open Google Drive Notes
                         </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DM Unit 03: SMM & Paid Social"
+                        <button class="btn btn-outline btn-preview" data-doc-title="Digital Marketing Complete Notes"
                             data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 4 -->
-                <div class="glass-card note-card" data-category="GoogleAds">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 04</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 5.3 MB</span>
-                    </div>
-                    <h3 class="note-title">Google Ads & Pay-Per-Click (PPC) Advertising</h3>
-                    <p class="note-desc">High-ROI paid search advertising: Search, Display, and Video campaigns, keyword
-                        match types (Broad, Phrase, Exact), Quality Score mechanics, Ad Rank calculation, smart bidding
-                        strategies (Target CPA, ROAS), and remarketing.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Google Search Ads</span>
-                        <span class="topic-badge">Quality Score</span>
-                        <span class="topic-badge">Match Types</span>
-                        <span class="topic-badge">Smart Bidding</span>
-                        <span class="topic-badge">Remarketing</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 54 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DM Unit 04: Google Ads PPC"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 5 -->
-                <div class="glass-card note-card" data-category="Content">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 05</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.9 MB</span>
-                    </div>
-                    <h3 class="note-title">Content Marketing, Copywriting & Email Automation</h3>
-                    <p class="note-desc">Persuasive copywriting formulas (AIDA, PAS), content calendar planning, lead
-                        magnet development, automated email marketing funnels, drip campaigns, segmentation, and
-                        deliverability optimization.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">Copywriting Formulas</span>
-                        <span class="topic-badge">Email Automation</span>
-                        <span class="topic-badge">Lead Magnets</span>
-                        <span class="topic-badge">Drip Sequences</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 50 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview"
-                            data-doc-title="DM Unit 05: Content & Email Marketing"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Unit 6 -->
-                <div class="glass-card note-card" data-category="Analytics">
-                    <div class="note-card-top">
-                        <span class="unit-tag">Unit 06</span>
-                        <span class="format-tag pdf"><i class="fa-solid fa-file-pdf"></i> PDF &bull; 4.2 MB</span>
-                    </div>
-                    <h3 class="note-title">Web Analytics, Google Analytics 4 (GA4) & ROI</h3>
-                    <p class="note-desc">Data-driven performance optimization: GA4 event-based tracking models, custom
-                        conversion events, UTM tag parameters, Conversion Rate Optimization (CRO), Return on Ad Spend
-                        (ROAS) calculation, and reporting.</p>
-                    <div class="note-topics">
-                        <span class="topic-badge">GA4 Tracking</span>
-                        <span class="topic-badge">UTM Parameters</span>
-                        <span class="topic-badge">CRO Testing</span>
-                        <span class="topic-badge">ROAS & ROI</span>
-                    </div>
-                    <div class="note-file-info">
-                        <span><i class="fa-regular fa-file-lines"></i> 42 Pages</span>
-                        <span><i class="fa-regular fa-calendar-check"></i> Updated 2026</span>
-                    </div>
-                    <div class="note-actions">
-                        <a href="https://drive.google.com/" target="_blank" class="btn btn-gdrive">
-                            <i class="fa-brands fa-google-drive"></i> Open Drive
-                        </a>
-                        <button class="btn btn-outline btn-preview" data-doc-title="DM Unit 06: Web Analytics & GA4"
-                            data-doc-url="https://drive.google.com/">
-                            <i class="fa-solid fa-eye"></i> Preview
+                            <i class="fa-solid fa-eye"></i> Preview Notes
                         </button>
                     </div>
                 </div>
@@ -2056,8 +1257,8 @@
                     </div>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0Gj8BuDMizroUGL0sGI2WRPpzdFOjWBxYmtaglQLJKtT31A/viewform?usp=header"
                         target="_blank" class="btn btn-primary w-100">Exam-1</a>
-                        <br>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScDZ1J_176zy7Ok8XGBes5GmZ5QMj9gcMtexl_20D4rXbd8xQ/viewform?usp=header"
+                    <br>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDZ1J_176zy7Ok8XGBes5GmZ5QMj9gcMtexl_20D4rXbd8xQ/viewform?usp=header"
                         target="_blank" class="btn btn-primary w-100">Exam-2</a>
                 </div>
 
@@ -2070,7 +1271,8 @@
                         <p class="mb-2"><em>"Hardware is the backbone that breathes life into digital software."</em>
                         </p>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX1cjgCuSfcfHCLSOOEjwlT7E5I_JGe_J9JaoxDtg0pUeLug/viewform?usp=publish-editor" target="_blank" class="btn btn-primary w-100">Begin Exam
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX1cjgCuSfcfHCLSOOEjwlT7E5I_JGe_J9JaoxDtg0pUeLug/viewform?usp=publish-editor"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam
                         6</a>
                 </div>
 
@@ -2490,7 +1692,8 @@
                         <h2 class="mb-1">Big-Byte - 3 Examination</h2>
                         <p class="mb-2"><em>"Small deeds done are better than great deeds planned."</em></p>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsIhTXhFE1HH0VOOTwLMwn7ekYt-lm9zKC96ba-KmNRPx1PA/viewform?usp=header" target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsIhTXhFE1HH0VOOTwLMwn7ekYt-lm9zKC96ba-KmNRPx1PA/viewform?usp=header"
+                        target="_blank" class="btn btn-primary w-100">Begin Test Now</a>
                 </div>
 
                 <!-- 4th paper -->
@@ -2719,7 +1922,8 @@
                         <p class="mb-2"><em>"Pivot Tables slice through millions of rows to expose hidden trends."</em>
                         </p>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSci0XteuO1To4oHF5nh2bZgD4SZ3S42qrhdlk2ia1iVPZej2w/viewform?usp=header" target="_blank" class="btn btn-primary w-100">Begin Exam
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSci0XteuO1To4oHF5nh2bZgD4SZ3S42qrhdlk2ia1iVPZej2w/viewform?usp=header"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam
                         2</a>
                 </div>
 
@@ -2730,7 +1934,8 @@
                         <h2 class="mb-1">ADVE - 3 Examination</h2>
                         <p class="mb-2"><em>"Power Query ETL cleans messy datasets in one automated click."</em></p>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSccwydsFFGDT-Oj1hFaymAD_347NBxmyEZagheqq6xqRah34Q/viewform?usp=publish-editor" target="_blank" class="btn btn-primary w-100">Begin Exam
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSccwydsFFGDT-Oj1hFaymAD_347NBxmyEZagheqq6xqRah34Q/viewform?usp=publish-editor"
+                        target="_blank" class="btn btn-primary w-100">Begin Exam
                         3</a>
                 </div>
 

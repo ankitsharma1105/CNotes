@@ -1,15 +1,66 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+    // Mobile Navigation Controller
     const mobileToggle = document.getElementById('mobile-menu-toggle');
     const navLinks = document.getElementById('nav-links');
 
-    if (mobileToggle && navLinks) {
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+    function toggleMobileNav() {
+        if (!navLinks || !mobileToggle) return;
+        const isOpen = navLinks.classList.toggle('show');
+        mobileToggle.classList.toggle('active', isOpen);
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+        if (!isOpen) {
+            document.querySelectorAll('.dropdown.mobile-open').forEach(d => d.classList.remove('mobile-open'));
+        }
+    }
+
+    function closeMobileNav() {
+        if (!navLinks || !mobileToggle) return;
+        navLinks.classList.remove('show');
+        mobileToggle.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            icon.className = 'fa-solid fa-bars';
+        }
+        document.querySelectorAll('.dropdown.mobile-open').forEach(d => d.classList.remove('mobile-open'));
+    }
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMobileNav();
         });
     }
+
+    // Dismiss mobile nav when clicking outside
+    document.addEventListener('click', (event) => {
+        if (navLinks && navLinks.classList.contains('show')) {
+            if (!navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+                closeMobileNav();
+            }
+        }
+    });
+
+    // Dismiss mobile nav on Escape key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeMobileNav();
+        }
+    });
+
+    // Reset mobile nav on screen resize if window is widened
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 868 && navLinks && navLinks.classList.contains('show')) {
+            closeMobileNav();
+        }
+    });
+
+    // Make closeMobileNav accessible to navigateTo
+    window.closeMobileNav = closeMobileNav;
 
     // Navigation Logic (SPA Routing) using Event Delegation
     document.addEventListener('click', (event) => {
@@ -17,9 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const navigateElement = event.target.closest('[data-navigate]');
 
         if (navigateElement) {
-            // Prevent default browser behavior if it's an anchor tag to stop it from jumping to the top of the page
+            // Prevent default browser behavior if it's an anchor tag to stop jumping
             if (navigateElement.tagName.toLowerCase() === 'a') {
                 event.preventDefault();
+            }
+
+            // On mobile screens (<=868px), tapping dropdown toggle link opens accordion instead of jumping
+            if (window.innerWidth <= 868 && navigateElement.classList.contains('dropdown-toggle-link')) {
+                const parentDropdown = navigateElement.closest('.dropdown');
+                if (parentDropdown) {
+                    const isAlreadyOpen = parentDropdown.classList.contains('mobile-open');
+                    document.querySelectorAll('.dropdown.mobile-open').forEach(d => {
+                        if (d !== parentDropdown) d.classList.remove('mobile-open');
+                    });
+                    parentDropdown.classList.toggle('mobile-open', !isAlreadyOpen);
+                    return;
+                }
             }
 
             const sectionId = navigateElement.getAttribute('data-navigate');
@@ -81,9 +145,13 @@ function navigateTo(sectionId) {
     }
 
     // Close mobile menu if open
-    const navLinks = document.getElementById('nav-links');
-    if (navLinks && navLinks.classList.contains('show')) {
-        navLinks.classList.remove('show');
+    if (typeof window.closeMobileNav === 'function') {
+        window.closeMobileNav();
+    } else {
+        const navLinks = document.getElementById('nav-links');
+        if (navLinks && navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+        }
     }
 
     // Scroll smoothly to the top of the page
@@ -1100,15 +1168,37 @@ function initNotesFeatures() {
             }
 
             if (previewIframe) {
-                // If it's a google drive URL with /view, transform to /preview for embedded viewer
+                const existingNotice = document.getElementById('previewModalFolderNotice');
+                if (existingNotice) existingNotice.remove();
+
                 let embedUrl = docUrl;
                 if (embedUrl.includes('drive.google.com/file/d/')) {
                     embedUrl = embedUrl.replace(/\/view(\?.*)?$/, '/preview');
-                } else if (embedUrl === 'https://drive.google.com/') {
-                    // Demo fallback viewer page
-                    embedUrl = 'about:blank';
+                    previewIframe.style.display = 'block';
+                    previewIframe.src = embedUrl;
+                } else {
+                    // Google Drive folders cannot be embedded in iframes due to browser security
+                    previewIframe.style.display = 'none';
+                    previewIframe.src = 'about:blank';
+                    const notice = document.createElement('div');
+                    notice.id = 'previewModalFolderNotice';
+                    notice.className = 'folder-preview-notice';
+                    notice.innerHTML = `
+                        <div style="text-align: center; padding: 2.5rem 1.5rem; color: #fff;">
+                            <div style="font-size: 3.8rem; color: #10b981; margin-bottom: 1.25rem;">
+                                <i class="fa-brands fa-google-drive"></i>
+                            </div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Google Drive Course Notes Folder</h3>
+                            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.6; font-size: 0.98rem;">
+                                All unit notes, PDFs, assignments, and study materials for this course are organized in Google Drive. Click below to view and download all files.
+                            </p>
+                            <a href="${escapeHtml(docUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-gdrive" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem; font-size: 1.05rem; font-weight: 600; border-radius: 12px; text-decoration: none;">
+                                <i class="fa-brands fa-google-drive"></i> Open Folder in Google Drive <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem; margin-left: 0.3rem;"></i>
+                            </a>
+                        </div>
+                    `;
+                    previewIframe.parentElement.appendChild(notice);
                 }
-                previewIframe.src = embedUrl;
             }
 
             previewModal.classList.add('show');
@@ -1120,7 +1210,12 @@ function initNotesFeatures() {
     function closePreviewModal() {
         if (previewModal) {
             previewModal.classList.remove('show');
-            if (previewIframe) previewIframe.src = 'about:blank';
+            if (previewIframe) {
+                previewIframe.src = 'about:blank';
+                previewIframe.style.display = 'block';
+            }
+            const existingNotice = document.getElementById('previewModalFolderNotice');
+            if (existingNotice) existingNotice.remove();
             document.body.style.overflow = '';
         }
     }
